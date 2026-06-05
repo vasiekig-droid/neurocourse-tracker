@@ -1,11 +1,11 @@
 {
-  "name": "НейроКурс Трекер",
+  "name": "НейроКурс Трекер 3.0",
   "short_name": "НейроКурс",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0f172a",
   "theme_color": "#7c3aed",
-  "description": "Личный трекер прохождения курса по нейросетям",
+  "description": "Личный AI-кабинет для прохождения курса, практики, промптов и портфолио",
   "icons": [
     {
       "src": "icon.svg",
