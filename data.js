@@ -9,7 +9,8 @@ window.DEFAULT_COURSE = [
             "type": "video",
             "title": "Введение",
             "duration": "5:58",
-            "status": "done"
+            "status": "done",
+            "watched": "5:58"
           }
         ]
       }
@@ -41,13 +42,15 @@ window.DEFAULT_COURSE = [
             "type": "video",
             "title": "Видео 1",
             "duration": "32:24",
-            "status": "done"
+            "status": "done",
+            "watched": "32:24"
           },
           {
             "type": "video",
             "title": "Видео 2",
             "duration": "30:37",
-            "status": "done"
+            "status": "done",
+            "watched": "30:37"
           },
           {
             "type": "guide",
@@ -69,7 +72,7 @@ window.DEFAULT_COURSE = [
           },
           {
             "type": "homework",
-            "title": "Ознакомиться с PDF-файлами",
+            "title": "Ознакомиться внимательно с PDF-файлами",
             "duration": "",
             "status": "done"
           },
@@ -93,7 +96,7 @@ window.DEFAULT_COURSE = [
           },
           {
             "type": "homework",
-            "title": "Исследовать GPT-агентов по интересам",
+            "title": "Исследовать GPT-агентов по сфере или интересам",
             "duration": "",
             "status": "done"
           },
@@ -320,7 +323,7 @@ window.DEFAULT_COURSE = [
           },
           {
             "type": "homework",
-            "title": "Выложить работу в Telegram-группу",
+            "title": "Выложить работу в Telegram-группу «Ваши работы фото»",
             "duration": "",
             "status": "todo"
           }
@@ -379,7 +382,7 @@ window.DEFAULT_COURSE = [
         ]
       },
       {
-        "title": "NanaBanana / SeeDream",
+        "title": "Фотосессия с помощью NanaBanana или SeeDream",
         "items": [
           {
             "type": "guide",
@@ -457,7 +460,7 @@ window.DEFAULT_COURSE = [
         ]
       },
       {
-        "title": "Фотосессия одежды и аксессуаров на практике",
+        "title": "Доп. урок: фотосессия одежды и аксессуаров на практике",
         "items": [
           {
             "type": "video",
@@ -473,13 +476,13 @@ window.DEFAULT_COURSE = [
           },
           {
             "type": "homework",
-            "title": "Выбрать нишу",
+            "title": "Выбрать свою нишу или нишу на свой вкус",
             "duration": "",
             "status": "todo"
           },
           {
             "type": "homework",
-            "title": "Сделать фотосессии разных товаров из ниши",
+            "title": "Сделать фотосессии разных товаров из выбранной ниши",
             "duration": "",
             "status": "todo"
           },
@@ -491,7 +494,7 @@ window.DEFAULT_COURSE = [
           },
           {
             "type": "homework",
-            "title": "Подготовить разные ракурсы",
+            "title": "Подготовить разные ракурсы для видео",
             "duration": "",
             "status": "todo"
           }
@@ -604,19 +607,19 @@ window.DEFAULT_COURSE = [
           },
           {
             "type": "extra",
-            "title": "Доп. видео 1",
+            "title": "Дополнительное видео 1",
             "duration": "33:52",
             "status": "todo"
           },
           {
             "type": "extra",
-            "title": "Доп. видео 2",
+            "title": "Дополнительное видео 2",
             "duration": "25:08",
             "status": "todo"
           },
           {
             "type": "extra",
-            "title": "Доп. видео 3",
+            "title": "Дополнительное видео 3",
             "duration": "40:25",
             "status": "todo"
           }

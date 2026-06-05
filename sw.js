@@ -1,4 +1,4 @@
-const CACHE_NAME = "neurocourse-tracker-v3";
+const CACHE_NAME = "neurocourse-tracker-v31";
 const ASSETS = ["./", "./index.html", "./manifest.json", "./icon.svg", "./data.js"];
 self.addEventListener("install", e => {
   self.skipWaiting();

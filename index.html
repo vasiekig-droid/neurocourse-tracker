@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>НейроКурс Трекер 3.0</title>
+<title>НейроКурс Трекер 3.1</title>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#7c3aed">
 <style>
@@ -26,7 +26,7 @@ table{width:100%;border-collapse:collapse}td,th{padding:10px;border-bottom:1px s
 </head>
 <body>
 <div class="app">
-<div class="top"><div><h1>🧠 НейроКурс Трекер 3.0</h1><div class="small">Трекер курса + практика + промпты + портфолио + идеи заработка.</div></div><div class="actions"><button class="primary" id="installBtn" style="display:none">📲 Установить</button><button onclick="exportAll()">⬇️ Бэкап</button><label class="filelabel">⬆️ Восстановить<input type="file" id="importFile" accept=".json"></label><button onclick="resetData()" class="danger">♻️ Сброс</button></div></div>
+<div class="top"><div><h1>🧠 НейроКурс Трекер 3.1</h1><div class="small">Трекер курса + практика + промпты + портфолио + идеи заработка.</div></div><div class="actions"><button class="primary" id="installBtn" style="display:none">📲 Установить</button><button onclick="exportAll()">⬇️ Бэкап</button><label class="filelabel">⬆️ Восстановить<input type="file" id="importFile" accept=".json"></label><button onclick="resetData()" class="danger">♻️ Сброс</button></div></div>
 <div class="nav"><button class="active" onclick="showPage('dashboard',this)">📊 Главная</button><button onclick="showPage('course',this)">📚 Курс</button><button onclick="showPage('practice',this)">⏱️ Практика</button><button onclick="showPage('calendar',this)">📅 Календарь</button><button onclick="showPage('prompts',this)">🪄 Промпты</button><button onclick="showPage('portfolio',this)">🖼️ Портфолио</button><button onclick="showPage('ideas',this)">💰 Идеи</button></div>
 
 <section id="dashboard">
@@ -63,7 +63,7 @@ table{width:100%;border-collapse:collapse}td,th{padding:10px;border-bottom:1px s
 </div>
 <script src="data.js"></script>
 <script>
-const KEY="neurocourse_v3_course", EXTRA="neurocourse_v3_extra";let currentSection=0;let deferredPrompt=null;
+const KEY="neurocourse_v31_course", EXTRA="neurocourse_v31_extra";let currentSection=0;let deferredPrompt=null;
 let course=JSON.parse(localStorage.getItem(KEY)||localStorage.getItem("neurocourse_pwa_progress_v2")||JSON.stringify(window.DEFAULT_COURSE));
 let extra=JSON.parse(localStorage.getItem(EXTRA)||'{"practice":[],"prompts":[],"works":[],"ideas":[],"note":""}');
 function save(){localStorage.setItem(KEY,JSON.stringify(course));renderAll()}function saveExtra(){localStorage.setItem(EXTRA,JSON.stringify(extra));renderAll()}
