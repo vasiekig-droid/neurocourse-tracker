@@ -1,6 +1,6 @@
 {
   "version": "3.3",
-  "updatedAt": "2026-06-05T21:05:51.555Z",
+  "updatedAt": "2026-06-05T21:06:55.097Z",
   "course": [
     {
       "section": "🧭 Введение",
@@ -125,7 +125,7 @@
               "title": "Видео",
               "duration": "2:14:27",
               "status": "progress",
-              "watched": "59:15"
+              "watched": "1:20:29"
             },
             {
               "type": "guide",
@@ -979,6 +979,8 @@
     "prompts": [],
     "works": [],
     "ideas": [],
-    "practiceDays": {}
+    "practiceDays": {
+      "2026-06-05": true
+    }
   }
 }
