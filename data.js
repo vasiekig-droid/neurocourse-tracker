@@ -1,0 +1,970 @@
+window.DEFAULT_COURSE = [
+  {
+    "section": "🧭 Введение",
+    "lessons": [
+      {
+        "title": "Введение",
+        "items": [
+          {
+            "type": "video",
+            "title": "Введение",
+            "duration": "5:58",
+            "status": "done"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "💳 Как оплачивать нейронки без иностранных карт",
+    "lessons": [
+      {
+        "title": "Оплата нейронок",
+        "items": [
+          {
+            "type": "guide",
+            "title": "Как оплатить нейронки",
+            "duration": "",
+            "status": "done"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "🧠 Обзоры нейросетей",
+    "lessons": [
+      {
+        "title": "ChatGPT",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео 1",
+            "duration": "32:24",
+            "status": "done"
+          },
+          {
+            "type": "video",
+            "title": "Видео 2",
+            "duration": "30:37",
+            "status": "done"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд 1",
+            "duration": "",
+            "status": "done"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд 2",
+            "duration": "",
+            "status": "done"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд 3",
+            "duration": "",
+            "status": "done"
+          },
+          {
+            "type": "homework",
+            "title": "Ознакомиться с PDF-файлами",
+            "duration": "",
+            "status": "done"
+          },
+          {
+            "type": "homework",
+            "title": "Познакомиться с ChatGPT и его возможностями",
+            "duration": "",
+            "status": "done"
+          },
+          {
+            "type": "homework",
+            "title": "Настроить ChatGPT под себя",
+            "duration": "",
+            "status": "done"
+          },
+          {
+            "type": "homework",
+            "title": "Пообщаться в разных чатах, задавая разные роли",
+            "duration": "",
+            "status": "done"
+          },
+          {
+            "type": "homework",
+            "title": "Исследовать GPT-агентов по интересам",
+            "duration": "",
+            "status": "done"
+          },
+          {
+            "type": "star",
+            "title": "Исследовать другие текстовые нейронки",
+            "duration": "",
+            "status": "done"
+          },
+          {
+            "type": "star",
+            "title": "Сравнить другие нейронки с ChatGPT",
+            "duration": "",
+            "status": "done"
+          }
+        ]
+      },
+      {
+        "title": "Higgsfield",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео",
+            "duration": "2:14:27",
+            "status": "progress",
+            "watched": "59:15"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд",
+            "duration": "",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Syntx",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео 1",
+            "duration": "16:04",
+            "status": "todo"
+          },
+          {
+            "type": "video",
+            "title": "Видео 2",
+            "duration": "43:43",
+            "status": "todo"
+          },
+          {
+            "type": "video",
+            "title": "Видео 3",
+            "duration": "34:38",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд",
+            "duration": "",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Runway",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео",
+            "duration": "55:50",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд",
+            "duration": "",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Kling",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео",
+            "duration": "1:35:44",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд",
+            "duration": "",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "ZenCreator",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео",
+            "duration": "1:07:32",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд",
+            "duration": "",
+            "status": "todo"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "🎨 Нейрофотосессия человека",
+    "lessons": [
+      {
+        "title": "Обязательная подготовка",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео 1",
+            "duration": "20:49",
+            "status": "todo"
+          },
+          {
+            "type": "video",
+            "title": "Видео 2",
+            "duration": "23:42",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд 1",
+            "duration": "",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд 2",
+            "duration": "",
+            "status": "todo"
+          },
+          {
+            "type": "homework",
+            "title": "Подготовить датасет",
+            "duration": "",
+            "status": "todo"
+          },
+          {
+            "type": "homework",
+            "title": "Подобрать минимум 10 референсов",
+            "duration": "",
+            "status": "todo"
+          },
+          {
+            "type": "homework",
+            "title": "Сохранить референсы на компьютере",
+            "duration": "",
+            "status": "todo"
+          },
+          {
+            "type": "homework",
+            "title": "Прописать промпты к референсам",
+            "duration": "",
+            "status": "todo"
+          },
+          {
+            "type": "star",
+            "title": "Придумать идею фотосессии с ChatGPT",
+            "duration": "",
+            "status": "todo"
+          },
+          {
+            "type": "star",
+            "title": "Проработать промпты по идее",
+            "duration": "",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Фотосессия с помощью Higgsfield",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео 1",
+            "duration": "2:43",
+            "status": "todo"
+          },
+          {
+            "type": "video",
+            "title": "Видео 2",
+            "duration": "47:10",
+            "status": "todo"
+          },
+          {
+            "type": "video",
+            "title": "Видео 3",
+            "duration": "1:05:00",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд",
+            "duration": "",
+            "status": "todo"
+          },
+          {
+            "type": "homework",
+            "title": "Провести фотосессию по подготовленным промптам",
+            "duration": "",
+            "status": "todo"
+          },
+          {
+            "type": "homework",
+            "title": "Сделать фото в Superjet",
+            "duration": "",
+            "status": "todo"
+          },
+          {
+            "type": "homework",
+            "title": "Выложить работу в Telegram-группу",
+            "duration": "",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Постобработка фотосессий",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео",
+            "duration": "12:53",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд 1",
+            "duration": "",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд 2",
+            "duration": "",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд 3",
+            "duration": "",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Дополнительные гайды к фотосессиям",
+        "items": [
+          {
+            "type": "guide",
+            "title": "Гайд 1",
+            "duration": "",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд 2",
+            "duration": "",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд 3",
+            "duration": "",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "NanaBanana / SeeDream",
+        "items": [
+          {
+            "type": "guide",
+            "title": "Гайд",
+            "duration": "",
+            "status": "todo"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "🛍️ Нейрофотосессия товаров",
+    "lessons": [
+      {
+        "title": "Введение",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео",
+            "duration": "10:33",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Связка ChatGPT + Midjourney",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео",
+            "duration": "28:32",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд",
+            "duration": "",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Связка ChatGPT + Midjourney + NanaBanana",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео",
+            "duration": "22:28",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд",
+            "duration": "",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Связка ChatGPT (платная подписка)",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео",
+            "duration": "1:11:35",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд",
+            "duration": "",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Фотосессия одежды и аксессуаров на практике",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео",
+            "duration": "1:21:17",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд",
+            "duration": "",
+            "status": "todo"
+          },
+          {
+            "type": "homework",
+            "title": "Выбрать нишу",
+            "duration": "",
+            "status": "todo"
+          },
+          {
+            "type": "homework",
+            "title": "Сделать фотосессии разных товаров из ниши",
+            "duration": "",
+            "status": "todo"
+          },
+          {
+            "type": "homework",
+            "title": "Сделать видео для одного из предметов",
+            "duration": "",
+            "status": "todo"
+          },
+          {
+            "type": "homework",
+            "title": "Подготовить разные ракурсы",
+            "duration": "",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Продуктовые карточки для маркетплейсов",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео",
+            "duration": "26:43",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд 1",
+            "duration": "",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд 2",
+            "duration": "",
+            "status": "todo"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "🎬 Создание видеороликов",
+    "lessons": [
+      {
+        "title": "Введение",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео 1",
+            "duration": "25:37",
+            "status": "todo"
+          },
+          {
+            "type": "video",
+            "title": "Видео 2",
+            "duration": "19:06",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Особенности создания привлекательного видео",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео 1",
+            "duration": "8:57",
+            "status": "todo"
+          },
+          {
+            "type": "video",
+            "title": "Видео 2",
+            "duration": "17:25",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд",
+            "duration": "",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Генерация аудиодорожек",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео",
+            "duration": "5:32",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Подробный разбор создания видеоклипа",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео 1",
+            "duration": "1:25",
+            "status": "todo"
+          },
+          {
+            "type": "video",
+            "title": "Видео 2",
+            "duration": "45:53",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Практическая работа по созданию видео",
+        "items": [
+          {
+            "type": "video",
+            "title": "Основное видео",
+            "duration": "38:44",
+            "status": "todo"
+          },
+          {
+            "type": "extra",
+            "title": "Доп. видео 1",
+            "duration": "33:52",
+            "status": "todo"
+          },
+          {
+            "type": "extra",
+            "title": "Доп. видео 2",
+            "duration": "25:08",
+            "status": "todo"
+          },
+          {
+            "type": "extra",
+            "title": "Доп. видео 3",
+            "duration": "40:25",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Практическая работа по созданию видеоминиатюры",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео",
+            "duration": "17:41",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Продвижение и монетизация нейровидео",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео",
+            "duration": "17:55",
+            "status": "todo"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "💰 Заработок на нейронках",
+    "lessons": [
+      {
+        "title": "Введение",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео",
+            "duration": "39:17",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Как можно зарабатывать на нейросетях",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео",
+            "duration": "3:10:33",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд",
+            "duration": "",
+            "status": "todo"
+          },
+          {
+            "type": "homework",
+            "title": "Подумать и выбрать интересную нишу",
+            "duration": "",
+            "status": "todo"
+          },
+          {
+            "type": "homework",
+            "title": "Выбрать направление для первых шагов",
+            "duration": "",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Что именно продаём? Как создать оффер",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео",
+            "duration": "1:19:34",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд 1",
+            "duration": "",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд 2",
+            "duration": "",
+            "status": "todo"
+          },
+          {
+            "type": "homework",
+            "title": "Создать свой оффер",
+            "duration": "",
+            "status": "todo"
+          },
+          {
+            "type": "homework",
+            "title": "Выбрать нишу для проработки",
+            "duration": "",
+            "status": "todo"
+          },
+          {
+            "type": "homework",
+            "title": "Разработать скрипты писем вместе с ChatGPT",
+            "duration": "",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Где искать клиентов",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео",
+            "duration": "55:27",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд 1",
+            "duration": "",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд 2",
+            "duration": "",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд 3",
+            "duration": "",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд 4",
+            "duration": "",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд 5",
+            "duration": "",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Ценообразование",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео",
+            "duration": "21:48",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд",
+            "duration": "",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Мои советы и лайфхаки",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео",
+            "duration": "54:49",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд",
+            "duration": "",
+            "status": "todo"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "🎨 Midjourney от А до Я",
+    "lessons": [
+      {
+        "title": "Введение",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео",
+            "duration": "5:59",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Навигация сайта",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео",
+            "duration": "18:22",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Настройки генерации",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео",
+            "duration": "26:25",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Генерация изображений",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео",
+            "duration": "21:32",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд 1",
+            "duration": "",
+            "status": "todo"
+          },
+          {
+            "type": "guide",
+            "title": "Гайд 2",
+            "duration": "",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Редактирование генераций",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео",
+            "duration": "12:48",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Персонализация",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео",
+            "duration": "11:26",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Организация",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео",
+            "duration": "6:45",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Омни-референс",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео",
+            "duration": "13:05",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Чаты и совместная работа над проектами",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео",
+            "duration": "4:29",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Видеогенерации",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео",
+            "duration": "7:22",
+            "status": "todo"
+          }
+        ]
+      },
+      {
+        "title": "Дополнительная информация по Midjourney",
+        "items": [
+          {
+            "type": "video",
+            "title": "Видео 1",
+            "duration": "14:00",
+            "status": "todo"
+          },
+          {
+            "type": "video",
+            "title": "Видео 2",
+            "duration": "13:57",
+            "status": "todo"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "📚 Библиотека",
+    "lessons": [
+      {
+        "title": "Библиотека",
+        "items": [
+          {
+            "type": "guide",
+            "title": "18 гайдов",
+            "duration": "",
+            "status": "todo"
+          }
+        ]
+      }
+    ]
+  }
+];

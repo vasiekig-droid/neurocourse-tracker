@@ -1,0 +1,17 @@
+{
+  "name": "НейроКурс Трекер",
+  "short_name": "НейроКурс",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#7c3aed",
+  "description": "Личный трекер прохождения курса по нейросетям",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
