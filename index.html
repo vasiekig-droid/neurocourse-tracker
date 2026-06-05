@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>НейроКурс Трекер 3.2</title>
+<title>НейроКурс Трекер 3.3 ☁️</title>
 <style>
 :root{--bg:#0f172a;--card:#111827;--card2:#1f2937;--text:#f8fafc;--muted:#cbd5e1;--line:rgba(255,255,255,.11);--a:#8b5cf6;--b:#22c55e}
 *{box-sizing:border-box}body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:radial-gradient(circle at 0 0,rgba(139,92,246,.35),transparent 34%),radial-gradient(circle at 100% 0,rgba(34,197,94,.18),transparent 30%),var(--bg);color:var(--text)}.app{max-width:1220px;margin:auto;padding:18px}.top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;position:sticky;top:0;background:linear-gradient(180deg,var(--bg),rgba(15,23,42,.88));backdrop-filter:blur(10px);z-index:10;padding:14px 0}h1{margin:0;font-size:28px}.small{color:var(--muted);font-size:14px}button,.filelabel{border:0;border-radius:12px;padding:9px 12px;background:var(--card2);color:var(--text);cursor:pointer;font-weight:700}.primary{background:linear-gradient(90deg,var(--a),#4f46e5)}.good{background:#166534}.warn{background:#854d0e}.danger{background:#9f1239}input[type=file]{display:none}.actions,.nav,.tabs{display:flex;gap:8px;flex-wrap:wrap}.nav{margin:16px 0}.nav button.active,.tab.active{background:linear-gradient(90deg,var(--a),#4f46e5)}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:12px 0}.card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.025));border:1px solid var(--line);border-radius:22px;padding:16px;box-shadow:0 18px 50px rgba(0,0,0,.24);margin:12px 0}.metric{font-size:27px;font-weight:900;margin-top:6px}.bar{height:18px;background:rgba(255,255,255,.1);border-radius:999px;overflow:hidden;margin-top:12px}.fill{height:100%;background:linear-gradient(90deg,var(--a),var(--b));width:0%;transition:.25s}.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}.pill{display:inline-flex;gap:6px;align-items:center;background:rgba(255,255,255,.08);border:1px solid var(--line);padding:6px 9px;border-radius:999px;font-size:13px;color:var(--muted);margin:3px}.hidden{display:none}input,textarea,select{border:1px solid var(--line);background:#0b1220;color:var(--text);border-radius:12px;padding:10px;font-family:inherit}textarea{width:100%;min-height:80px}.search{width:100%;margin:8px 0}.item{display:grid;grid-template-columns:44px 1fr 120px 135px 185px;gap:10px;align-items:center;padding:10px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.035);margin:7px 0}.type{font-size:22px;text-align:center}.title{font-weight:750}.duration{color:var(--muted)}.status{font-weight:900}.controls{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}.mini{padding:6px 8px;border-radius:9px;font-size:12px}.timeInput{width:80px}table{width:100%;border-collapse:collapse}td,th{padding:10px;border-bottom:1px solid var(--line);text-align:left}th{color:var(--muted)}.miniBar{height:10px;background:rgba(255,255,255,.1);border-radius:99px;overflow:hidden}.miniFill{height:100%;background:linear-gradient(90deg,var(--a),var(--b))}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.listCard{border:1px solid var(--line);border-radius:16px;padding:12px;margin:8px 0;background:rgba(255,255,255,.035)}.row{display:flex;justify-content:space-between;gap:10px}.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}.day{min-height:62px;border:1px solid var(--line);border-radius:12px;padding:8px;background:rgba(255,255,255,.035)}.doneDay{background:rgba(34,197,94,.16);border-color:rgba(34,197,94,.45)}.today{outline:2px solid var(--a)}@media(max-width:920px){.grid,.cards,.formgrid{grid-template-columns:1fr}.item{grid-template-columns:34px 1fr}.duration,.status,.controls{grid-column:2}.top{position:static;flex-direction:column}.calendar{grid-template-columns:repeat(2,1fr)}}
@@ -11,7 +11,27 @@
 </head>
 <body>
 <div class="app">
-<div class="top"><div><h1>🧠 НейроКурс Трекер 3.2</h1><div class="small">Весь курс встроен прямо в приложение. Без отдельного data.js.</div></div><div class="actions"><button onclick="exportAll()">⬇️ Бэкап</button><label class="filelabel">⬆️ Восстановить<input type="file" id="importFile" accept=".json"></label><button onclick="hardReset()" class="danger">♻️ Сбросить и загрузить курс</button></div></div>
+<div class="top"><div><h1>🧠 НейроКурс Трекер 3.3 ☁️</h1><div class="small">Встроенный курс + синхронизация между телефоном и компьютером через GitHub.</div></div><div class="actions"><button onclick="openSyncSettings()">☁️ Синхронизация</button><button onclick="cloudPull()">⬇️ Из облака</button><button onclick="cloudPush()">⬆️ В облако</button><button onclick="exportAll()">⬇️ Бэкап</button><label class="filelabel">⬆️ Восстановить<input type="file" id="importFile" accept=".json"></label><button onclick="hardReset()" class="danger">♻️ Сбросить и загрузить курс</button></div></div>
+
+<div id="syncModal" class="card hidden" style="border-color:rgba(56,189,248,.45)">
+<h2>☁️ Синхронизация через GitHub</h2>
+<div class="small">Нужно один раз ввести данные. Прогресс будет храниться в файле <b>progress.json</b> в твоём репозитории.</div>
+<div class="formgrid" style="margin-top:10px">
+  <input id="syncOwner" placeholder="GitHub логин, например vasiekig-droid">
+  <input id="syncRepo" placeholder="Репозиторий, например neurocourse-tracker">
+  <input id="syncBranch" placeholder="Ветка, обычно main">
+  <input id="syncToken" placeholder="GitHub token">
+</div>
+<div class="small" style="margin-top:8px">Токен хранится только в браузере этого устройства. Не публикуй его в GitHub и не отправляй никому.</div>
+<div class="actions" style="margin-top:10px;justify-content:flex-start">
+  <button class="primary" onclick="saveSyncSettings()">💾 Сохранить настройки</button>
+  <button onclick="cloudPull()">⬇️ Загрузить прогресс</button>
+  <button onclick="cloudPush()">⬆️ Сохранить прогресс</button>
+  <button onclick="closeSyncSettings()">Закрыть</button>
+</div>
+<div id="syncStatus" class="small" style="margin-top:8px"></div>
+</div>
+
 <div class="nav"><button class="active" onclick="showPage('dashboard',this)">📊 Главная</button><button onclick="showPage('course',this)">📚 Курс</button><button onclick="showPage('practice',this)">⏱️ Практика</button><button onclick="showPage('calendar',this)">📅 Календарь</button><button onclick="showPage('prompts',this)">🪄 Промпты</button><button onclick="showPage('portfolio',this)">🖼️ Портфолио</button><button onclick="showPage('ideas',this)">💰 Идеи</button></div>
 <section id="dashboard"><div class="cards"><div class="card"><div class="small">Общий прогресс задач</div><div class="metric" id="overallPct">0%</div><div class="bar"><div class="fill" id="overallFill"></div></div></div><div class="card"><div class="small">Видео просмотрено</div><div class="metric" id="watchedTime">0</div></div><div class="card"><div class="small">Осталось видео</div><div class="metric" id="leftTime">0</div></div><div class="card"><div class="small">Задачи закрыты</div><div class="metric" id="taskCount">0/0</div></div></div><div class="grid"><div class="card"><div class="small">🔥 Что делать сегодня</div><h2 id="todayTitle">—</h2><div id="todayList"></div><div class="bar"><div class="fill" id="focusFill"></div></div></div><div class="card"><div class="small">📅 План до 1 июля</div><h2 id="dailyNeed">—</h2><div id="planText" class="small"></div><div id="typeStats"></div></div></div><div class="card"><h2>📊 Прогресс по разделам</h2><table><thead><tr><th>Раздел</th><th>Статус</th><th>Прогресс</th></tr></thead><tbody id="sectionTable"></tbody></table></div></section>
 <section id="course" class="hidden"><input class="search" id="search" placeholder="🔎 Найти урок, гайд или домашку..."><div class="tabs" id="tabs"></div><div id="sectionBox"></div></section>
@@ -23,7 +43,7 @@
 </div>
 <script>
 const DEFAULT_COURSE = [{"section": "🧭 Введение", "lessons": [{"title": "Введение", "items": [{"type": "video", "title": "Введение", "duration": "5:58", "status": "done", "watched": "5:58"}]}]}, {"section": "💳 Как оплачивать нейронки без иностранных карт", "lessons": [{"title": "Оплата нейронок", "items": [{"type": "guide", "title": "Как оплатить нейронки", "duration": "", "status": "done"}]}]}, {"section": "🧠 Обзоры нейросетей", "lessons": [{"title": "ChatGPT", "items": [{"type": "video", "title": "Видео 1", "duration": "32:24", "status": "done", "watched": "32:24"}, {"type": "video", "title": "Видео 2", "duration": "30:37", "status": "done", "watched": "30:37"}, {"type": "guide", "title": "Гайд 1", "duration": "", "status": "done"}, {"type": "guide", "title": "Гайд 2", "duration": "", "status": "done"}, {"type": "guide", "title": "Гайд 3", "duration": "", "status": "done"}, {"type": "homework", "title": "Ознакомиться внимательно с PDF-файлами", "duration": "", "status": "done"}, {"type": "homework", "title": "Познакомиться с ChatGPT и его возможностями", "duration": "", "status": "done"}, {"type": "homework", "title": "Настроить ChatGPT под себя", "duration": "", "status": "done"}, {"type": "homework", "title": "Пообщаться в разных чатах, задавая разные роли", "duration": "", "status": "done"}, {"type": "homework", "title": "Исследовать GPT-агентов по сфере или интересам", "duration": "", "status": "done"}, {"type": "star", "title": "Исследовать другие текстовые нейронки", "duration": "", "status": "done"}, {"type": "star", "title": "Сравнить другие нейронки с ChatGPT", "duration": "", "status": "done"}]}, {"title": "Higgsfield", "items": [{"type": "video", "title": "Видео", "duration": "2:14:27", "status": "progress", "watched": "59:15"}, {"type": "guide", "title": "Гайд", "duration": "", "status": "todo"}]}, {"title": "Syntx", "items": [{"type": "video", "title": "Видео 1", "duration": "16:04", "status": "todo"}, {"type": "video", "title": "Видео 2", "duration": "43:43", "status": "todo"}, {"type": "video", "title": "Видео 3", "duration": "34:38", "status": "todo"}, {"type": "guide", "title": "Гайд", "duration": "", "status": "todo"}]}, {"title": "Runway", "items": [{"type": "video", "title": "Видео", "duration": "55:50", "status": "todo"}, {"type": "guide", "title": "Гайд", "duration": "", "status": "todo"}]}, {"title": "Kling", "items": [{"type": "video", "title": "Видео", "duration": "1:35:44", "status": "todo"}, {"type": "guide", "title": "Гайд", "duration": "", "status": "todo"}]}, {"title": "ZenCreator", "items": [{"type": "video", "title": "Видео", "duration": "1:07:32", "status": "todo"}, {"type": "guide", "title": "Гайд", "duration": "", "status": "todo"}]}]}, {"section": "🎨 Нейрофотосессия человека", "lessons": [{"title": "Обязательная подготовка", "items": [{"type": "video", "title": "Видео 1", "duration": "20:49", "status": "todo"}, {"type": "video", "title": "Видео 2", "duration": "23:42", "status": "todo"}, {"type": "guide", "title": "Гайд 1", "duration": "", "status": "todo"}, {"type": "guide", "title": "Гайд 2", "duration": "", "status": "todo"}, {"type": "homework", "title": "Подготовить датасет", "duration": "", "status": "todo"}, {"type": "homework", "title": "Подобрать минимум 10 референсов", "duration": "", "status": "todo"}, {"type": "homework", "title": "Сохранить референсы на компьютере", "duration": "", "status": "todo"}, {"type": "homework", "title": "Прописать промпты к референсам", "duration": "", "status": "todo"}, {"type": "star", "title": "Придумать идею фотосессии с ChatGPT", "duration": "", "status": "todo"}, {"type": "star", "title": "Проработать промпты по идее", "duration": "", "status": "todo"}]}, {"title": "Фотосессия с помощью Higgsfield", "items": [{"type": "video", "title": "Видео 1", "duration": "2:43", "status": "todo"}, {"type": "video", "title": "Видео 2", "duration": "47:10", "status": "todo"}, {"type": "video", "title": "Видео 3", "duration": "1:05:00", "status": "todo"}, {"type": "guide", "title": "Гайд", "duration": "", "status": "todo"}, {"type": "homework", "title": "Провести фотосессию по подготовленным промптам", "duration": "", "status": "todo"}, {"type": "homework", "title": "Сделать фото в Superjet", "duration": "", "status": "todo"}, {"type": "homework", "title": "Выложить работу в Telegram-группу «Ваши работы фото»", "duration": "", "status": "todo"}]}, {"title": "Постобработка фотосессий", "items": [{"type": "video", "title": "Видео", "duration": "12:53", "status": "todo"}, {"type": "guide", "title": "Гайд 1", "duration": "", "status": "todo"}, {"type": "guide", "title": "Гайд 2", "duration": "", "status": "todo"}, {"type": "guide", "title": "Гайд 3", "duration": "", "status": "todo"}]}, {"title": "Дополнительные гайды к фотосессиям", "items": [{"type": "guide", "title": "Гайд 1", "duration": "", "status": "todo"}, {"type": "guide", "title": "Гайд 2", "duration": "", "status": "todo"}, {"type": "guide", "title": "Гайд 3", "duration": "", "status": "todo"}]}, {"title": "Фотосессия с помощью NanaBanana или SeeDream", "items": [{"type": "guide", "title": "Гайд", "duration": "", "status": "todo"}]}]}, {"section": "🛍️ Нейрофотосессия товаров", "lessons": [{"title": "Введение", "items": [{"type": "video", "title": "Видео", "duration": "10:33", "status": "todo"}]}, {"title": "Связка ChatGPT + Midjourney", "items": [{"type": "video", "title": "Видео", "duration": "28:32", "status": "todo"}, {"type": "guide", "title": "Гайд", "duration": "", "status": "todo"}]}, {"title": "Связка ChatGPT + Midjourney + NanaBanana", "items": [{"type": "video", "title": "Видео", "duration": "22:28", "status": "todo"}, {"type": "guide", "title": "Гайд", "duration": "", "status": "todo"}]}, {"title": "Связка ChatGPT (платная подписка)", "items": [{"type": "video", "title": "Видео", "duration": "1:11:35", "status": "todo"}, {"type": "guide", "title": "Гайд", "duration": "", "status": "todo"}]}, {"title": "Доп. урок: фотосессия одежды и аксессуаров на практике", "items": [{"type": "video", "title": "Видео", "duration": "1:21:17", "status": "todo"}, {"type": "guide", "title": "Гайд", "duration": "", "status": "todo"}, {"type": "homework", "title": "Выбрать свою нишу или нишу на свой вкус", "duration": "", "status": "todo"}, {"type": "homework", "title": "Сделать фотосессии разных товаров из выбранной ниши", "duration": "", "status": "todo"}, {"type": "homework", "title": "Сделать видео для одного из предметов", "duration": "", "status": "todo"}, {"type": "homework", "title": "Подготовить разные ракурсы для видео", "duration": "", "status": "todo"}]}, {"title": "Продуктовые карточки для маркетплейсов", "items": [{"type": "video", "title": "Видео", "duration": "26:43", "status": "todo"}, {"type": "guide", "title": "Гайд 1", "duration": "", "status": "todo"}, {"type": "guide", "title": "Гайд 2", "duration": "", "status": "todo"}]}]}, {"section": "🎬 Создание видеороликов", "lessons": [{"title": "Введение", "items": [{"type": "video", "title": "Видео 1", "duration": "25:37", "status": "todo"}, {"type": "video", "title": "Видео 2", "duration": "19:06", "status": "todo"}]}, {"title": "Особенности создания привлекательного видео", "items": [{"type": "video", "title": "Видео 1", "duration": "8:57", "status": "todo"}, {"type": "video", "title": "Видео 2", "duration": "17:25", "status": "todo"}, {"type": "guide", "title": "Гайд", "duration": "", "status": "todo"}]}, {"title": "Генерация аудиодорожек", "items": [{"type": "video", "title": "Видео", "duration": "5:32", "status": "todo"}]}, {"title": "Подробный разбор создания видеоклипа", "items": [{"type": "video", "title": "Видео 1", "duration": "1:25", "status": "todo"}, {"type": "video", "title": "Видео 2", "duration": "45:53", "status": "todo"}]}, {"title": "Практическая работа по созданию видео", "items": [{"type": "video", "title": "Основное видео", "duration": "38:44", "status": "todo"}, {"type": "extra", "title": "Дополнительное видео 1", "duration": "33:52", "status": "todo"}, {"type": "extra", "title": "Дополнительное видео 2", "duration": "25:08", "status": "todo"}, {"type": "extra", "title": "Дополнительное видео 3", "duration": "40:25", "status": "todo"}]}, {"title": "Практическая работа по созданию видеоминиатюры", "items": [{"type": "video", "title": "Видео", "duration": "17:41", "status": "todo"}]}, {"title": "Продвижение и монетизация нейровидео", "items": [{"type": "video", "title": "Видео", "duration": "17:55", "status": "todo"}]}]}, {"section": "💰 Заработок на нейронках", "lessons": [{"title": "Введение", "items": [{"type": "video", "title": "Видео", "duration": "39:17", "status": "todo"}]}, {"title": "Как можно зарабатывать на нейросетях", "items": [{"type": "video", "title": "Видео", "duration": "3:10:33", "status": "todo"}, {"type": "guide", "title": "Гайд", "duration": "", "status": "todo"}, {"type": "homework", "title": "Подумать и выбрать интересную нишу", "duration": "", "status": "todo"}, {"type": "homework", "title": "Выбрать направление для первых шагов", "duration": "", "status": "todo"}]}, {"title": "Что именно продаём? Как создать оффер", "items": [{"type": "video", "title": "Видео", "duration": "1:19:34", "status": "todo"}, {"type": "guide", "title": "Гайд 1", "duration": "", "status": "todo"}, {"type": "guide", "title": "Гайд 2", "duration": "", "status": "todo"}, {"type": "homework", "title": "Создать свой оффер", "duration": "", "status": "todo"}, {"type": "homework", "title": "Выбрать нишу для проработки", "duration": "", "status": "todo"}, {"type": "homework", "title": "Разработать скрипты писем вместе с ChatGPT", "duration": "", "status": "todo"}]}, {"title": "Где искать клиентов", "items": [{"type": "video", "title": "Видео", "duration": "55:27", "status": "todo"}, {"type": "guide", "title": "Гайд 1", "duration": "", "status": "todo"}, {"type": "guide", "title": "Гайд 2", "duration": "", "status": "todo"}, {"type": "guide", "title": "Гайд 3", "duration": "", "status": "todo"}, {"type": "guide", "title": "Гайд 4", "duration": "", "status": "todo"}, {"type": "guide", "title": "Гайд 5", "duration": "", "status": "todo"}]}, {"title": "Ценообразование", "items": [{"type": "video", "title": "Видео", "duration": "21:48", "status": "todo"}, {"type": "guide", "title": "Гайд", "duration": "", "status": "todo"}]}, {"title": "Мои советы и лайфхаки", "items": [{"type": "video", "title": "Видео", "duration": "54:49", "status": "todo"}, {"type": "guide", "title": "Гайд", "duration": "", "status": "todo"}]}]}, {"section": "🎨 Midjourney от А до Я", "lessons": [{"title": "Введение", "items": [{"type": "video", "title": "Видео", "duration": "5:59", "status": "todo"}]}, {"title": "Навигация сайта", "items": [{"type": "video", "title": "Видео", "duration": "18:22", "status": "todo"}]}, {"title": "Настройки генерации", "items": [{"type": "video", "title": "Видео", "duration": "26:25", "status": "todo"}]}, {"title": "Генерация изображений", "items": [{"type": "video", "title": "Видео", "duration": "21:32", "status": "todo"}, {"type": "guide", "title": "Гайд 1", "duration": "", "status": "todo"}, {"type": "guide", "title": "Гайд 2", "duration": "", "status": "todo"}]}, {"title": "Редактирование генераций", "items": [{"type": "video", "title": "Видео", "duration": "12:48", "status": "todo"}]}, {"title": "Персонализация", "items": [{"type": "video", "title": "Видео", "duration": "11:26", "status": "todo"}]}, {"title": "Организация", "items": [{"type": "video", "title": "Видео", "duration": "6:45", "status": "todo"}]}, {"title": "Омни-референс", "items": [{"type": "video", "title": "Видео", "duration": "13:05", "status": "todo"}]}, {"title": "Чаты и совместная работа над проектами", "items": [{"type": "video", "title": "Видео", "duration": "4:29", "status": "todo"}]}, {"title": "Видеогенерации", "items": [{"type": "video", "title": "Видео", "duration": "7:22", "status": "todo"}]}, {"title": "Дополнительная информация по Midjourney", "items": [{"type": "video", "title": "Видео 1", "duration": "14:00", "status": "todo"}, {"type": "video", "title": "Видео 2", "duration": "13:57", "status": "todo"}]}]}, {"section": "📚 Библиотека", "lessons": [{"title": "Библиотека", "items": [{"type": "guide", "title": "18 гайдов", "duration": "", "status": "todo"}]}]}];
-const KEY="neurocourse_v32_course", EXTRA="neurocourse_v32_extra";let currentSection=0;
+const KEY="neurocourse_v33_course", EXTRA="neurocourse_v33_extra", SYNC="neurocourse_v33_sync";let currentSection=0;let syncTimer=null;
 let course=JSON.parse(localStorage.getItem(KEY)||JSON.stringify(DEFAULT_COURSE));
 if(!Array.isArray(course)||course.length===0){course=JSON.parse(JSON.stringify(DEFAULT_COURSE));localStorage.setItem(KEY,JSON.stringify(course));}
 let extra=JSON.parse(localStorage.getItem(EXTRA)||'{"practice":[],"prompts":[],"works":[],"ideas":[],"practiceDays":{}}');
@@ -31,7 +51,8 @@ function parseTime(t){if(!t)return 0;let p=String(t).trim().split(":").map(Numbe
 function fmt(sec){sec=Math.max(0,Math.round(sec||0));let h=Math.floor(sec/3600);sec%=3600;let m=Math.floor(sec/60),s=sec%60;if(h)return `${h} ч ${String(m).padStart(2,"0")} мин`;if(m)return `${m} мин ${String(s).padStart(2,"0")} сек`;return `${s} сек`}
 function icon(t){return{video:"🎥",guide:"📖",homework:"📝",star:"⭐",extra:"🎁"}[t]||"•"}function label(s){return s==="done"?"✅ Сделано":s==="progress"?"🔵 В процессе":"⬜ Не начато"}
 function itemProg(i){if(i.status==="done")return 1;if((i.type==="video"||i.type==="extra")&&i.status==="progress"){let d=parseTime(i.duration),w=parseTime(i.watched||"0:00");return d?Math.min(1,w/d):.5}return i.status==="progress"?.5:0}
-function save(){localStorage.setItem(KEY,JSON.stringify(course));renderAll()}function saveExtra(){localStorage.setItem(EXTRA,JSON.stringify(extra));renderAll()}
+function save(){localStorage.setItem(KEY,JSON.stringify(course));renderAll();scheduleCloudPush()}
+function saveExtra(){localStorage.setItem(EXTRA,JSON.stringify(extra));renderAll();scheduleCloudPush()}
 function stats(){let tv=0,wv=0,total=0,done=0,weighted=0,types={video:[0,0],guide:[0,0],homework:[0,0],star:[0,0],extra:[0,0]};course.forEach(s=>s.lessons.forEach(l=>l.items.forEach(i=>{total++;weighted+=itemProg(i);if(i.status==="done")done++;if(types[i.type]){types[i.type][1]++;if(i.status==="done")types[i.type][0]++}if(i.type==="video"||i.type==="extra"){let d=parseTime(i.duration);tv+=d;wv+=i.status==="done"?d:(i.status==="progress"?Math.min(d,parseTime(i.watched||"0:00")):0)}})));return{tv,wv,total,done,weighted,types}}
 function sectionStats(s){let total=0,w=0,done=0;s.lessons.forEach(l=>l.items.forEach(i=>{total++;w+=itemProg(i);if(i.status==="done")done++}));return{pct:total?w/total*100:0,done,total}}
 function setStatus(si,li,ii,st){let i=course[si].lessons[li].items[ii];i.status=st;if(st==="done"&&(i.type==="video"||i.type==="extra"))i.watched=i.duration;if(st==="todo")i.watched="";markToday();save()}
@@ -50,6 +71,107 @@ function addWork(){extra.works.push({title:workTitle.value,link:workLink.value,n
 function renderWorks(){workList.innerHTML=(extra.works||[]).slice().reverse().map(w=>`<div class="listCard"><b>${w.title}</b>${w.link?`<div><a href="${w.link}" target="_blank" style="color:#93c5fd">Открыть</a></div>`:""}<div>${w.note||""}</div></div>`).join("")}
 function addIdea(){extra.ideas.push({title:ideaTitle.value,note:ideaNote.value,date:todayISO()});ideaTitle.value=ideaNote.value="";saveExtra()}
 function renderIdeas(){ideaList.innerHTML=(extra.ideas||[]).slice().reverse().map(i=>`<div class="listCard"><b>${i.title}</b><div>${i.note||""}</div></div>`).join("")}
+
+function getSyncSettings(){
+  return JSON.parse(localStorage.getItem(SYNC)||'{}');
+}
+function openSyncSettings(){
+  const s=getSyncSettings();
+  syncOwner.value=s.owner||"";
+  syncRepo.value=s.repo||"neurocourse-tracker";
+  syncBranch.value=s.branch||"main";
+  syncToken.value=s.token||"";
+  syncModal.classList.remove("hidden");
+  syncStatus.textContent="Заполни поля и нажми «Сохранить настройки».";
+}
+function closeSyncSettings(){
+  syncModal.classList.add("hidden");
+}
+function saveSyncSettings(){
+  const s={
+    owner:syncOwner.value.trim(),
+    repo:syncRepo.value.trim()||"neurocourse-tracker",
+    branch:syncBranch.value.trim()||"main",
+    token:syncToken.value.trim()
+  };
+  localStorage.setItem(SYNC,JSON.stringify(s));
+  syncStatus.textContent="✅ Настройки синхронизации сохранены.";
+}
+function syncConfigured(){
+  const s=getSyncSettings();
+  return !!(s.owner&&s.repo&&s.branch&&s.token);
+}
+function cloudPayload(){
+  return {
+    version:"3.3",
+    updatedAt:new Date().toISOString(),
+    course,
+    extra
+  };
+}
+function encodeUnicode(str){
+  return btoa(unescape(encodeURIComponent(str)));
+}
+function decodeUnicode(str){
+  return decodeURIComponent(escape(atob(str)));
+}
+async function githubGetFile(){
+  const s=getSyncSettings();
+  const url=`https://api.github.com/repos/${s.owner}/${s.repo}/contents/progress.json?ref=${s.branch}`;
+  const res=await fetch(url,{headers:{Authorization:`Bearer ${s.token}`,Accept:"application/vnd.github+json"}});
+  if(res.status===404) return null;
+  if(!res.ok) throw new Error("GitHub GET: "+res.status+" "+await res.text());
+  return await res.json();
+}
+async function cloudPull(){
+  try{
+    if(!syncConfigured()){openSyncSettings(); syncStatus.textContent="Сначала заполни настройки синхронизации."; return;}
+    syncStatus.textContent="Загружаю прогресс из облака...";
+    const file=await githubGetFile();
+    if(!file){syncStatus.textContent="В облаке ещё нет progress.json. Сначала нажми «В облако» на устройстве, где актуальный прогресс."; return;}
+    const data=JSON.parse(decodeUnicode(file.content.replace(/\n/g,"")));
+    if(data.course) course=data.course;
+    if(data.extra) extra=data.extra;
+    localStorage.setItem(KEY,JSON.stringify(course));
+    localStorage.setItem(EXTRA,JSON.stringify(extra));
+    syncStatus.textContent="✅ Прогресс загружен из облака.";
+    renderAll();
+  }catch(e){
+    syncStatus.textContent="❌ Ошибка загрузки: "+e.message;
+    console.error(e);
+  }
+}
+async function cloudPush(showStatus=true){
+  try{
+    if(!syncConfigured()){ if(showStatus){openSyncSettings(); syncStatus.textContent="Сначала заполни настройки синхронизации.";} return; }
+    if(showStatus) syncStatus.textContent="Сохраняю прогресс в облако...";
+    const s=getSyncSettings();
+    const current=await githubGetFile();
+    const body={
+      message:"Update neurocourse progress",
+      content:encodeUnicode(JSON.stringify(cloudPayload(),null,2)),
+      branch:s.branch
+    };
+    if(current&&current.sha) body.sha=current.sha;
+    const url=`https://api.github.com/repos/${s.owner}/${s.repo}/contents/progress.json`;
+    const res=await fetch(url,{
+      method:"PUT",
+      headers:{Authorization:`Bearer ${s.token}`,Accept:"application/vnd.github+json","Content-Type":"application/json"},
+      body:JSON.stringify(body)
+    });
+    if(!res.ok) throw new Error("GitHub PUT: "+res.status+" "+await res.text());
+    if(showStatus) syncStatus.textContent="✅ Прогресс сохранён в облако.";
+  }catch(e){
+    if(showStatus) syncStatus.textContent="❌ Ошибка сохранения: "+e.message;
+    console.error(e);
+  }
+}
+function scheduleCloudPush(){
+  if(!syncConfigured()) return;
+  clearTimeout(syncTimer);
+  syncTimer=setTimeout(()=>cloudPush(false),1200);
+}
+
 function exportAll(){let blob=new Blob([JSON.stringify({course,extra},null,2)],{type:"application/json"});let a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="neurocourse-full-backup.json";a.click()}
 importFile.addEventListener("change",e=>{let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{let data=JSON.parse(r.result);course=data.course||data;extra=data.extra||extra;localStorage.setItem(KEY,JSON.stringify(course));localStorage.setItem(EXTRA,JSON.stringify(extra));renderAll()};r.readAsText(f)})
 function hardReset(){if(confirm("Загрузить встроенный курс заново?")){localStorage.removeItem(KEY);course=JSON.parse(JSON.stringify(DEFAULT_COURSE));localStorage.setItem(KEY,JSON.stringify(course));renderAll()}}
