@@ -1,1 +1,5 @@
-Версия 4.1. Возвращена вкладка Курс в верхнее меню. Замените index.html, manifest.json и sw.js в корне репозитория GitHub Pages. Открывайте сайт с ?v=41.
+НейроКурс Трекер v4.2
+
+Исправлена ошибка синхронизации из v4.1 и сделано видимое окно статуса GitHub Sync.
+Замените на GitHub файлы index.html, manifest.json и sw.js.
+Открывайте: https://vasiekig-droid.github.io/neurocourse-tracker/?v=42
