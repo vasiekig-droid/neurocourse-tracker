@@ -1,6 +1,6 @@
 {
   "version": "3.3",
-  "updatedAt": "2026-06-06T09:54:15.319Z",
+  "updatedAt": "2026-06-06T11:36:04.376Z",
   "course": [
     {
       "section": "🧭 Введение",
@@ -984,7 +984,14 @@
         "note": "Создавала трекер в котором сейчас работаю для курса. Потратила на это вечер. Параллельно смотрела видео с курса. "
       }
     ],
-    "prompts": [],
+    "prompts": [
+      {
+        "title": "Шарж",
+        "tool": "ЧАт GPT",
+        "text": "Extreme 3D CGI caricature of [character]—extremely exaggerated proportions and oversized features for maximum comic effect. A head-and-shoulders portrait, incredibly stylized with bold, dramatic expressions. Ultra-smooth matte materials. Character perspective. A saturated background creating strong visual contrast. Soft lighting and ambient shadows for depth.",
+        "date": "2026-06-06"
+      }
+    ],
     "works": [],
     "ideas": [],
     "practiceDays": {
