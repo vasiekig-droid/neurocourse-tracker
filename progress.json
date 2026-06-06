@@ -1,6 +1,6 @@
 {
   "version": "3.4",
-  "updatedAt": "2026-06-06T12:54:47.456Z",
+  "updatedAt": "2026-06-06T13:10:22.844Z",
   "course": [
     {
       "section": "🧭 Введение",
@@ -142,7 +142,8 @@
               "type": "video",
               "title": "Видео 1",
               "duration": "16:04",
-              "status": "todo"
+              "status": "done",
+              "watched": "16:04"
             },
             {
               "type": "video",
@@ -999,7 +1000,7 @@
       "2026-06-06": true
     },
     "videoDays": {
-      "2026-06-06": 3234
+      "2026-06-06": 4198
     },
     "settings": {
       "deadline": "2026-06-30"
