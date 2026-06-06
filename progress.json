@@ -1,6 +1,6 @@
 {
   "version": "3.9",
-  "updatedAt": "2026-06-06T14:13:10.975Z",
+  "updatedAt": "2026-06-06T14:14:39.995Z",
   "course": [
     {
       "section": "🧭 Введение",
@@ -1024,18 +1024,6 @@
       {
         "date": "2026-06-08",
         "title": "Танцы",
-        "start": "13:00",
-        "end": "14:00"
-      },
-      {
-        "date": "2026-06-08",
-        "title": "Танцы",
-        "start": "13:00",
-        "end": "14:00"
-      },
-      {
-        "date": "2026-06-08",
-        "title": "Танцы",
         "category": "💃 Кружки / танцы",
         "start": "13:00",
         "end": "14:00",
@@ -1095,6 +1083,42 @@
         "end": "14:00",
         "source": "recurring",
         "seriesId": "series_1780755189130_db6ce1b7c54d9"
+      },
+      {
+        "date": "2026-06-08",
+        "title": "🇬🇧 Английский",
+        "category": "🇬🇧 Английский",
+        "start": "18:00",
+        "end": "19:00",
+        "source": "recurring",
+        "seriesId": "series_1780755278396_a5958b321bcfa8"
+      },
+      {
+        "date": "2026-06-15",
+        "title": "🇬🇧 Английский",
+        "category": "🇬🇧 Английский",
+        "start": "18:00",
+        "end": "19:00",
+        "source": "recurring",
+        "seriesId": "series_1780755278396_a5958b321bcfa8"
+      },
+      {
+        "date": "2026-06-22",
+        "title": "🇬🇧 Английский",
+        "category": "🇬🇧 Английский",
+        "start": "18:00",
+        "end": "19:00",
+        "source": "recurring",
+        "seriesId": "series_1780755278396_a5958b321bcfa8"
+      },
+      {
+        "date": "2026-06-29",
+        "title": "🇬🇧 Английский",
+        "category": "🇬🇧 Английский",
+        "start": "18:00",
+        "end": "19:00",
+        "source": "recurring",
+        "seriesId": "series_1780755278396_a5958b321bcfa8"
       }
     ],
     "viewingLog": [],
