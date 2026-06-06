@@ -1,6 +1,6 @@
 {
   "version": "3.3",
-  "updatedAt": "2026-06-06T11:36:04.376Z",
+  "updatedAt": "2026-06-06T12:06:53.754Z",
   "course": [
     {
       "section": "🧭 Введение",
@@ -124,8 +124,8 @@
               "type": "video",
               "title": "Видео",
               "duration": "2:14:27",
-              "status": "progress",
-              "watched": "1:20:29"
+              "status": "done",
+              "watched": "2:14:27"
             },
             {
               "type": "guide",
