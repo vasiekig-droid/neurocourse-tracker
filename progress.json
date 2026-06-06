@@ -1,6 +1,6 @@
 {
-  "version": "3.6",
-  "updatedAt": "2026-06-06T13:29:10.879Z",
+  "version": "3.7",
+  "updatedAt": "2026-06-06T13:35:56.163Z",
   "course": [
     {
       "section": "🧭 Введение",
@@ -150,7 +150,7 @@
               "title": "Видео 2",
               "duration": "43:43",
               "status": "progress",
-              "watched": "12:00"
+              "watched": "22:00"
             },
             {
               "type": "video",
@@ -1008,7 +1008,7 @@
       "2026-06-06": true
     },
     "videoDays": {
-      "2026-06-06": 4918
+      "2026-06-06": 5518
     },
     "settings": {
       "deadline": "2026-06-30",
@@ -1020,6 +1020,19 @@
       "eveningMode": "normal"
     },
     "restDays": {},
-    "busy": []
+    "busy": [
+      {
+        "date": "2026-06-08",
+        "title": "Танцы",
+        "start": "13:00",
+        "end": "14:00"
+      },
+      {
+        "date": "2026-06-08",
+        "title": "Танцы",
+        "start": "13:00",
+        "end": "14:00"
+      }
+    ]
   }
 }
