@@ -1,6 +1,6 @@
 {
-  "version": "3.3",
-  "updatedAt": "2026-06-06T12:06:53.754Z",
+  "version": "3.4",
+  "updatedAt": "2026-06-06T12:52:45.562Z",
   "course": [
     {
       "section": "🧭 Введение",
@@ -124,14 +124,14 @@
               "type": "video",
               "title": "Видео",
               "duration": "2:14:27",
-              "status": "done",
+              "status": "progress",
               "watched": "2:14:27"
             },
             {
               "type": "guide",
               "title": "Гайд",
               "duration": "",
-              "status": "todo"
+              "status": "progress"
             }
           ]
         },
@@ -997,6 +997,10 @@
     "practiceDays": {
       "2026-06-05": true,
       "2026-06-06": true
+    },
+    "videoDays": {},
+    "settings": {
+      "deadline": "2026-07-01"
     }
   }
 }
