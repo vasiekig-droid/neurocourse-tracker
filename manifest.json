@@ -1,9 +1,9 @@
 {
-  "name": "НейроКурс Трекер 3.6",
+  "name": "НейроКурс Трекер 3.7",
   "short_name": "НейроКурс",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0f172a",
   "theme_color": "#7c3aed",
-  "description": "Трекер курса с GitHub-синхронизацией, дневной нормой, выходными, планированием и анти-выгоранием времени"
+  "description": "Трекер курса с GitHub-синхронизацией, импортом Google Calendar, удалением записей, дневной нормой и анти-выгоранием"
 }
