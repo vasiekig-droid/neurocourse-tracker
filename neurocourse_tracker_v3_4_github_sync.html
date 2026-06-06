@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0f172a">
+<title>НейроКурс Трекер v3.4</title>
+<style>
+:root{
+  --bg:#0f172a;--card:#111827;--card2:#1f2937;--text:#f8fafc;--muted:#94a3b8;--line:#334155;
+  --accent:#60a5fa;--accent2:#a78bfa;--good:#34d399;--warn:#fbbf24;--danger:#fb7185;--white:#ffffff;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:radial-gradient(circle at 0 0,rgba(96,165,250,.18),transparent 34%),radial-gradient(circle at 100% 0,rgba(167,139,250,.18),transparent 32%),var(--bg);color:var(--text);padding:18px}
+.wrapper{max-width:1180px;margin:0 auto}.header{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;margin-bottom:16px}
+h1{margin:0 0 6px;font-size:clamp(26px,5vw,38px);letter-spacing:-.04em}.subtitle{color:var(--muted);line-height:1.45}.badge{background:rgba(96,165,250,.15);border:1px solid rgba(96,165,250,.35);padding:10px 12px;border-radius:999px;color:#bfdbfe;white-space:nowrap}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:14px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:14px}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:14px}
+.card{background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.024));border:1px solid rgba(148,163,184,.18);box-shadow:0 18px 55px rgba(0,0,0,.25);border-radius:20px;padding:18px}.solid{background:rgba(31,41,55,.92)}.big{grid-column:span 2}.label{color:var(--muted);font-size:14px;margin-bottom:8px}.value{font-size:clamp(25px,4vw,34px);font-weight:850;letter-spacing:-.04em}.value.small{font-size:24px}.hint{color:var(--muted);font-size:13px;margin-top:8px;line-height:1.45}.progress{height:18px;background:rgba(148,163,184,.18);border-radius:999px;overflow:hidden;margin:12px 0 4px}.fill{height:100%;width:0%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:999px;transition:.25s}.fill.good{background:linear-gradient(90deg,var(--good),#86efac)}.fill.warn{background:linear-gradient(90deg,var(--warn),#fde68a)}.fill.danger{background:linear-gradient(90deg,var(--danger),#fda4af)}
+.controls{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;align-items:end}.field label{display:block;color:var(--muted);font-size:13px;margin-bottom:6px}input,textarea,select{width:100%;padding:12px;border:none;border-radius:13px;background:#e5e7eb;color:#111827;font-size:16px}textarea{min-height:104px;resize:vertical}button{padding:12px 14px;border:none;border-radius:13px;cursor:pointer;background:linear-gradient(90deg,var(--accent),var(--accent2));color:white;font-weight:760;font-size:15px}button:hover{filter:brightness(1.05)}.ghost{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16)}.goodBtn{background:linear-gradient(90deg,#10b981,#34d399)}.dangerBtn{background:linear-gradient(90deg,#e11d48,#fb7185)}.quick{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.quick button{padding:10px 12px;font-size:14px}
+table{width:100%;border-collapse:collapse;margin-top:6px}th,td{padding:11px 9px;border-bottom:1px solid rgba(148,163,184,.18);text-align:left;vertical-align:middle}th{color:var(--muted);font-weight:650;background:rgba(255,255,255,.04)}tr:last-child td{border-bottom:none}.status{white-space:nowrap}.mini{height:10px;background:rgba(148,163,184,.2);border-radius:999px;overflow:hidden}.mini span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:999px}.note{margin-top:12px;padding:12px;border-radius:15px;background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.25);color:#fde68a;line-height:1.45}.ok{background:rgba(52,211,153,.1);border-color:rgba(52,211,153,.25);color:#bbf7d0}.bad{background:rgba(251,113,133,.1);border-color:rgba(251,113,133,.25);color:#fecdd3}.pill{display:inline-flex;align-items:center;gap:6px;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.08);color:#dbeafe;font-size:13px;margin:4px 4px 0 0}.syncStatus{padding:10px 12px;border-radius:13px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:#dbeafe;margin-top:10px;font-size:13px;line-height:1.45}.secret{font-family:monospace}.footer{color:var(--muted);font-size:13px;text-align:center;margin:22px 0 8px}
+@media(max-width:900px){body{padding:12px}.grid,.grid3,.grid2,.controls{grid-template-columns:1fr}.big{grid-column:span 1}.header{flex-direction:column}.badge{white-space:normal}.card{padding:15px}table{font-size:14px}th,td{padding:9px 6px}.hideMobile{display:none}}
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div><h1>📚 НейроКурс Трекер</h1><div class="subtitle">Версия 3.4: дневная норма, история просмотра и синхронизация телефона/компьютера через GitHub.</div></div>
+    <div class="badge"><div id="todayBadge">Сегодня</div><div style="font-size:12px;margin-top:3px;opacity:.85">v3.4 · GitHub Sync</div></div>
+  </div>
+
+  <div class="grid">
+    <div class="card big">
+      <div class="label">Общий прогресс по видео</div><div class="value" id="overallPct">0%</div>
+      <div class="progress"><div id="overallFill" class="fill"></div></div><div class="hint" id="overallHint"></div>
+    </div>
+    <div class="card"><div class="label">Всего просмотрено</div><div class="value small" id="watchedTotalLabel">0 мин</div><div class="hint">Стартовое значение: 2 ч 29 мин.</div></div>
+    <div class="card"><div class="label">Всего осталось</div><div class="value small" id="remainingTotalLabel">0 мин</div><div class="hint">Пересчитывается после каждого добавления.</div></div>
+  </div>
+
+  <div class="grid3">
+    <div class="card solid"><div class="label">🎯 Нужно смотреть в день</div><div class="value" id="dailyNeedLabel">0 мин</div><div class="hint" id="daysLeftLabel"></div></div>
+    <div class="card solid"><div class="label">👀 Сегодня уже просмотрено</div><div class="value" id="todayWatchedLabel">0 мин</div><div class="progress"><div id="todayFill" class="fill good"></div></div></div>
+    <div class="card solid"><div class="label">⏳ Осталось сегодня</div><div class="value" id="todayRemainingLabel">0 мин</div><div class="hint" id="todayMood"></div></div>
+  </div>
+
+  <div class="grid3">
+    <div class="card"><div class="label">🔥 Серия занятий</div><div class="value small" id="streakLabel">0 дней</div><div class="hint">Считает дни, когда ты добавляла просмотр.</div></div>
+    <div class="card"><div class="label">📈 Среднее за 7 дней</div><div class="value small" id="avg7Label">0 мин</div><div class="hint">Помогает понять реальный темп, а не магию понедельника.</div></div>
+    <div class="card"><div class="label">🏁 Прогноз финиша</div><div class="value small" id="forecastLabel">—</div><div class="hint" id="forecastHint">По твоему среднему темпу.</div></div>
+  </div>
+
+  <div class="card">
+    <h3>➕ Добавить просмотр за сегодня</h3>
+    <div class="controls">
+      <div class="field"><label>Добавить время, формат ч:мм или мм</label><input id="addInput" placeholder="например 0:30 или 30"></div>
+      <div class="field"><label>Всего просмотрено вручную</label><input id="totalWatchedInput" placeholder="например 2:29"></div>
+      <div class="field"><label>Дедлайн</label><input id="deadlineInput" type="date"></div>
+      <button onclick="addWatched()">➕ Добавить</button>
+    </div>
+    <div class="quick">
+      <button class="ghost" onclick="quickAdd(10)">+10 мин</button><button class="ghost" onclick="quickAdd(15)">+15 мин</button><button class="ghost" onclick="quickAdd(20)">+20 мин</button><button class="ghost" onclick="quickAdd(30)">+30 мин</button><button class="goodBtn" onclick="saveManual()">💾 Сохранить вручную</button><button class="ghost" onclick="resetToday()">🧹 Обнулить сегодня</button>
+    </div>
+    <div class="note" id="saveNote">Добавь просмотр, и трекер сам прибавит его к сегодняшнему дню и общему прогрессу.</div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3>🔥 Сейчас в работе: Higgsfield</h3>
+      <div class="controls" style="grid-template-columns:1fr 1fr">
+        <div class="field"><label>Higgsfield просмотрено</label><input id="higgsInput" placeholder="например 59:15"></div>
+        <button onclick="saveHiggs()">💾 Сохранить</button>
+      </div>
+      <div class="progress"><div id="higgsFill" class="fill warn"></div></div><div class="hint" id="higgsInfo"></div>
+    </div>
+    <div class="card">
+      <h3>📝 Заметка на сегодня</h3>
+      <textarea id="todayNote" placeholder="Например: посмотрела часть урока, домашку перенести на завтра"></textarea>
+      <div class="quick"><button onclick="saveNote()">💾 Сохранить заметку</button><button class="ghost" onclick="clearNote()">Очистить</button></div>
+      <div class="hint">Заметка сохраняется отдельно для сегодняшней даты.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>📅 История последних дней</h3>
+    <table><thead><tr><th>Дата</th><th>Просмотрено</th><th class="hideMobile">Заметка</th></tr></thead><tbody id="historyBody"></tbody></table>
+  </div>
+
+  <div class="card">
+    <h3>📊 Разделы курса</h3>
+    <table>
+      <thead><tr><th>Раздел</th><th>Длительность</th><th>Статус</th><th>Прогресс</th></tr></thead>
+      <tbody id="sectionsBody"></tbody>
+    </table>
+    <div class="hint">Статусы пока справочные. Просмотр считается по общему времени и текущему уроку.</div>
+  </div>
+
+
+  <div class="card">
+    <h3>☁️ GitHub Sync: телефон + компьютер</h3>
+    <div class="hint">Это та самая схема с токеном: приложение сохраняет данные в отдельный файл репозитория, а телефон и компьютер читают один и тот же прогресс. Токен хранится только в браузере на твоём устройстве, не в коде сайта.</div>
+    <div class="controls" style="margin-top:12px">
+      <div class="field"><label>GitHub username / owner</label><input id="ghOwner" placeholder="например vasiekig"></div>
+      <div class="field"><label>Репозиторий</label><input id="ghRepo" placeholder="например neurocourse-tracker"></div>
+      <div class="field"><label>Ветка</label><input id="ghBranch" placeholder="main"></div>
+      <div class="field"><label>Файл данных</label><input id="ghPath" placeholder="tracker-data.json"></div>
+    </div>
+    <div class="controls" style="grid-template-columns:2fr 1fr 1fr 1fr;margin-top:12px">
+      <div class="field"><label>Fine-grained token</label><input id="ghToken" class="secret" type="password" placeholder="github_pat_... или ghp_..."></div>
+      <button onclick="saveGithubSettings()">💾 Сохранить настройки</button>
+      <button class="ghost" onclick="toggleTokenVisibility()">👁️ Токен</button>
+      <button class="ghost" onclick="clearGithubSettings()">🧹 Очистить</button>
+    </div>
+    <div class="quick">
+      <button class="goodBtn" onclick="githubSave()">⬆️ Сохранить в GitHub</button>
+      <button onclick="githubLoad()">⬇️ Загрузить из GitHub</button>
+      <button class="ghost" onclick="githubStatusCheck()">🔎 Проверить связь</button>
+      <button class="ghost" onclick="toggleAutoSync()" id="autoSyncBtn">Автосинхронизация: выкл</button>
+    </div>
+    <div class="syncStatus" id="syncStatus">GitHub Sync ещё не настроен. Заполни поля, сохрани настройки, потом нажми «Сохранить в GitHub» на компьютере и «Загрузить из GitHub» на телефоне.</div>
+    <div class="note bad">Важно: не вставляй токен прямо в файл <b>index.html</b> перед публикацией. Вводи его только в поле на открытом сайте. Для токена достаточно доступа Contents: Read and Write только к этому репозиторию.</div>
+  </div>
+
+  <div class="card">
+    <h3>🔁 Резервная копия вручную</h3>
+    <div class="grid2">
+      <div>
+        <div class="hint">Это запасной способ, если GitHub Sync временно капризничает. Можно скачать backup и импортировать его на другом устройстве вручную.</div>
+        <div class="quick"><button onclick="downloadBackup()">⬇️ Скачать backup</button><button class="ghost" onclick="copyBackup()">📋 Скопировать backup</button><button class="dangerBtn" onclick="factoryReset()">Сбросить всё</button></div>
+      </div>
+      <div>
+        <textarea id="importBox" placeholder="Вставь сюда backup JSON и нажми импорт"></textarea>
+        <div class="quick"><button onclick="importBackup()">⬆️ Импортировать</button></div>
+      </div>
+    </div>
+    <div class="note bad">Не публикуй backup в открытый GitHub, если будешь писать туда личные заметки. Сам файл приложения можно публиковать спокойно.</div>
+  </div>
+
+  <div class="footer">НейроКурс Трекер v3.4 · GitHub Sync · 33 учебные ссылки под контролем 🧭</div>
+</div>
+<script>
+const COURSE_TOTAL = toSec('28:45:15');
+const DEFAULT_TOTAL_WATCHED = toSec('2:29:00');
+const HIGGS_TOTAL = toSec('2:14:27');
+const todayKey = localDateKey(new Date());
+const sections = [
+  ['🧭 Введение','5:58','✅ Сделано',100],['💳 Оплата нейронок','гайд','✅ Сделано',100],['🧠 Обзоры нейросетей','8:30:59','🔵 В процессе',29.2],['🎨 Нейрофотосессия человека','2:52:17','⬜ Не начато',0],['🛍️ Нейрофотосессия товаров','4:01:08','⬜ Не начато',0],['🎬 Создание видеороликов','3:18:15','⬜ Не начато',0],['💰 Заработок на нейронках','7:21:28','⬜ Не начато',0],['🎨 Midjourney от А до Я','2:35:10','⬜ Не начато',0],['📚 Библиотека','18 гайдов','⬜ Не начато',0]
+];
+function localDateKey(d){const y=d.getFullYear();const m=String(d.getMonth()+1).padStart(2,'0');const day=String(d.getDate()).padStart(2,'0');return `${y}-${m}-${day}`}
+function toSec(t){if(!t)return 0;t=String(t).trim().replace(',', '.');if(/^\d+$/.test(t))return Number(t)*60;let p=t.split(':').map(Number);if(p.some(isNaN))return 0;if(p.length===2)return p[0]*3600+p[1]*60;if(p.length===3)return p[0]*3600+p[1]*60+p[2];return 0}
+function fmt(sec){sec=Math.max(0,Math.round(sec));let h=Math.floor(sec/3600),m=Math.floor((sec%3600)/60),s=sec%60;if(h>0&&s>0)return `${h} ч ${m} мин ${s} сек`;if(h>0)return `${h} ч ${m} мин`;if(m>0)return `${m} мин`;return `${s} сек`}
+function hm(sec){sec=Math.max(0,Math.round(sec));let h=Math.floor(sec/3600),m=Math.floor((sec%3600)/60);return `${h}:${String(m).padStart(2,'0')}`}
+function pct(a,b){return b?Math.min(100,Math.max(0,a/b*100)):0}
+function daysUntil(deadline){const now=new Date();const start=new Date(now.getFullYear(),now.getMonth(),now.getDate());const end=new Date(deadline+'T00:00:00');return Math.max(1,Math.ceil((end-start)/86400000)+1)}
+function getDeadline(){return localStorage.getItem('deadline')||'2026-07-01'}
+function getTodayWatched(){return Number(localStorage.getItem('day_'+todayKey)||0)}
+function getTotalWatched(){return Number(localStorage.getItem('totalWatchedSec')||DEFAULT_TOTAL_WATCHED)}
+function getHiggsWatched(){return Number(localStorage.getItem('higgsWatchedSec')||toSec('59:15'))}
+function setDay(date,sec){localStorage.setItem('day_'+date, String(Math.max(0,sec)))}
+function getNote(date){return localStorage.getItem('note_'+date)||''}
+function getLastNDates(n){const out=[];const d=new Date();for(let i=0;i<n;i++){const x=new Date(d);x.setDate(d.getDate()-i);out.push(localDateKey(x))}return out}
+function renderSections(){document.getElementById('sectionsBody').innerHTML=sections.map(s=>`<tr><td>${s[0]}</td><td>${s[1]}</td><td class="status">${s[2]}</td><td><div class="mini"><span style="width:${s[3]}%"></span></div></td></tr>`).join('')}
+function calcStreak(){let streak=0;const d=new Date();for(let i=0;i<365;i++){const x=new Date(d);x.setDate(d.getDate()-i);if(Number(localStorage.getItem('day_'+localDateKey(x))||0)>0)streak++;else break}return streak}
+function avg7(){const dates=getLastNDates(7);return dates.reduce((sum,k)=>sum+Number(localStorage.getItem('day_'+k)||0),0)/7}
+function forecastFinish(remaining){const avg=avg7();if(avg<=0)return null;const days=Math.ceil(remaining/avg);const d=new Date();d.setDate(d.getDate()+days);return {days,date:d}}
+function renderHistory(){const rows=getLastNDates(10).map(k=>{const sec=Number(localStorage.getItem('day_'+k)||0);const note=getNote(k);return `<tr><td>${new Date(k+'T00:00:00').toLocaleDateString('ru-RU')}</td><td>${fmt(sec)}</td><td class="hideMobile">${note?escapeHtml(note):'—'}</td></tr>`}).join('');document.getElementById('historyBody').innerHTML=rows}
+function escapeHtml(str){return String(str).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#039;','"':'&quot;'}[c]))}
+function render(){const deadline=getDeadline();const totalWatched=Math.min(COURSE_TOTAL,getTotalWatched());const remaining=Math.max(0,COURSE_TOTAL-totalWatched);const days=daysUntil(deadline);const dailyNeed=remaining/days;const todayWatched=getTodayWatched();const todayRemaining=Math.max(0,dailyNeed-todayWatched);const todayPercent=pct(todayWatched,dailyNeed);const overallPercent=pct(totalWatched,COURSE_TOTAL);const higgsWatched=Math.min(HIGGS_TOTAL,getHiggsWatched());const higgsPercent=pct(higgsWatched,HIGGS_TOTAL);document.getElementById('todayBadge').innerText=`Сегодня: ${new Date().toLocaleDateString('ru-RU')}`;document.getElementById('overallPct').innerText=overallPercent.toFixed(1)+'%';document.getElementById('overallFill').style.width=overallPercent+'%';document.getElementById('overallHint').innerHTML=`Всего видео: <span class="pill">${fmt(COURSE_TOTAL)}</span> Осталось: <span class="pill">${fmt(remaining)}</span>`;document.getElementById('watchedTotalLabel').innerText=fmt(totalWatched);document.getElementById('remainingTotalLabel').innerText=fmt(remaining);document.getElementById('dailyNeedLabel').innerText=fmt(dailyNeed);document.getElementById('daysLeftLabel').innerText=`До ${new Date(deadline+'T00:00:00').toLocaleDateString('ru-RU')} осталось дней: ${days}.`;document.getElementById('todayWatchedLabel').innerText=fmt(todayWatched);document.getElementById('todayFill').style.width=Math.min(100,todayPercent)+'%';document.getElementById('todayRemainingLabel').innerText=todayRemaining>0?fmt(todayRemaining):'норма закрыта ✅';document.getElementById('todayMood').innerText=todayRemaining>0?'Ещё немного, и дневной план будет закрыт.':'Сегодняшний план выполнен. Можно спокойно переключаться на домашку или отдых.';document.getElementById('totalWatchedInput').value=hm(totalWatched);document.getElementById('deadlineInput').value=deadline;document.getElementById('higgsInput').value=hm(higgsWatched);document.getElementById('higgsFill').style.width=higgsPercent+'%';document.getElementById('higgsInfo').innerText=`Просмотрено: ${fmt(higgsWatched)} из ${fmt(HIGGS_TOTAL)}. Осталось: ${fmt(HIGGS_TOTAL-higgsWatched)}. Прогресс урока: ${higgsPercent.toFixed(1)}%.`;document.getElementById('todayNote').value=getNote(todayKey);document.getElementById('streakLabel').innerText=calcStreak()+' дн.';document.getElementById('avg7Label').innerText=fmt(avg7());const f=forecastFinish(remaining);document.getElementById('forecastLabel').innerText=f?f.date.toLocaleDateString('ru-RU'):'—';document.getElementById('forecastHint').innerText=f?`Если держать средний темп, финиш примерно через ${f.days} дн.`:'Появится после нескольких дней просмотра.';const note=document.getElementById('saveNote');note.className='note '+(todayRemaining<=0?'ok':'');note.innerText=todayRemaining<=0?'Дневная норма закрыта. Отличная галочка в журнале ✅':`Сегодня осталось посмотреть ${fmt(todayRemaining)} из дневной нормы ${fmt(dailyNeed)}.`;renderHistory();renderSections()}
+function addWatched(){const add=toSec(document.getElementById('addInput').value);if(add<=0){alert('Введи время, например 15 или 0:15');return}setDay(todayKey,getTodayWatched()+add);localStorage.setItem('totalWatchedSec',String(Math.min(COURSE_TOTAL,getTotalWatched()+add)));document.getElementById('addInput').value='';render();scheduleAutoSync()}
+function quickAdd(min){document.getElementById('addInput').value=String(min);addWatched()}
+function saveManual(){const manual=toSec(document.getElementById('totalWatchedInput').value);if(manual>0)localStorage.setItem('totalWatchedSec',String(Math.min(COURSE_TOTAL,manual)));localStorage.setItem('deadline',document.getElementById('deadlineInput').value||'2026-07-01');render();scheduleAutoSync()}
+function saveHiggs(){const sec=toSec(document.getElementById('higgsInput').value);localStorage.setItem('higgsWatchedSec',String(Math.min(HIGGS_TOTAL,sec)));render();scheduleAutoSync()}
+function resetToday(){if(confirm('Обнулить просмотр за сегодня?')){setDay(todayKey,0);render();scheduleAutoSync()}}
+function saveNote(){localStorage.setItem('note_'+todayKey,document.getElementById('todayNote').value||'');render();scheduleAutoSync()}
+function clearNote(){localStorage.removeItem('note_'+todayKey);render();scheduleAutoSync()}
+function collectData(){const data={version:'3.4',app:'neurocourse-tracker',exportedAt:new Date().toISOString(),items:{}};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k&&(/^(day_|note_|totalWatchedSec|deadline|higgsWatchedSec)/.test(k)))data.items[k]=localStorage.getItem(k)}return data}
+function downloadBackup(){const blob=new Blob([JSON.stringify(collectData(),null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='neurocourse-tracker-backup.json';a.click();URL.revokeObjectURL(a.href)}
+async function copyBackup(){const text=JSON.stringify(collectData(),null,2);try{await navigator.clipboard.writeText(text);alert('Backup скопирован.')}catch(e){document.getElementById('importBox').value=text;alert('Не получилось скопировать автоматически, я вывел backup в поле импорта.')}}
+function importDataObject(data){if(!data||!data.items)throw new Error('bad-data');Object.entries(data.items).forEach(([k,v])=>localStorage.setItem(k,String(v)));render()}
+function importBackup(){try{const raw=document.getElementById('importBox').value.trim();const data=JSON.parse(raw);importDataObject(data);document.getElementById('importBox').value='';scheduleAutoSync();alert('Данные импортированы.')}catch(e){alert('Не удалось импортировать. Проверь, что вставлен backup JSON целиком.')}}
+function factoryReset(){if(confirm('Точно сбросить все данные трекера на этом устройстве?')){Object.keys(localStorage).filter(k=>/^(day_|note_|totalWatchedSec|deadline|higgsWatchedSec)/.test(k)).forEach(k=>localStorage.removeItem(k));render();scheduleAutoSync()}}
+
+const GH_KEYS = {owner:'gh_owner',repo:'gh_repo',branch:'gh_branch',path:'gh_path',token:'gh_token',auto:'gh_autoSync',last:'gh_lastSync'};
+let autoSyncTimer = null;
+function statusMsg(text,kind='info'){const el=document.getElementById('syncStatus');if(!el)return;el.textContent=text;el.style.borderColor=kind==='bad'?'rgba(251,113,133,.45)':kind==='ok'?'rgba(52,211,153,.45)':'rgba(255,255,255,.12)';el.style.color=kind==='bad'?'#fecdd3':kind==='ok'?'#bbf7d0':'#dbeafe'}
+function getGhConfig(){return {owner:localStorage.getItem(GH_KEYS.owner)||'',repo:localStorage.getItem(GH_KEYS.repo)||'',branch:localStorage.getItem(GH_KEYS.branch)||'main',path:localStorage.getItem(GH_KEYS.path)||'tracker-data.json',token:localStorage.getItem(GH_KEYS.token)||''}}
+function fillGithubSettings(){const c=getGhConfig();document.getElementById('ghOwner').value=c.owner;document.getElementById('ghRepo').value=c.repo;document.getElementById('ghBranch').value=c.branch;document.getElementById('ghPath').value=c.path;document.getElementById('ghToken').value=c.token;updateAutoButton();const last=localStorage.getItem(GH_KEYS.last);if(c.owner&&c.repo&&c.token)statusMsg('GitHub Sync настроен. Последняя синхронизация: '+(last?new Date(last).toLocaleString('ru-RU'):'ещё не было')+'.','ok')}
+function saveGithubSettings(){localStorage.setItem(GH_KEYS.owner,document.getElementById('ghOwner').value.trim());localStorage.setItem(GH_KEYS.repo,document.getElementById('ghRepo').value.trim());localStorage.setItem(GH_KEYS.branch,document.getElementById('ghBranch').value.trim()||'main');localStorage.setItem(GH_KEYS.path,document.getElementById('ghPath').value.trim()||'tracker-data.json');localStorage.setItem(GH_KEYS.token,document.getElementById('ghToken').value.trim());fillGithubSettings();statusMsg('Настройки GitHub сохранены в этом браузере. Теперь можно сохранить данные в GitHub.','ok')}
+function clearGithubSettings(){if(confirm('Очистить GitHub-настройки и токен в этом браузере?')){Object.values(GH_KEYS).forEach(k=>localStorage.removeItem(k));fillGithubSettings();statusMsg('GitHub-настройки очищены на этом устройстве.','info')}}
+function toggleTokenVisibility(){const el=document.getElementById('ghToken');el.type=el.type==='password'?'text':'password'}
+function updateAutoButton(){const on=localStorage.getItem(GH_KEYS.auto)==='1';const b=document.getElementById('autoSyncBtn');if(b)b.textContent='Автосинхронизация: '+(on?'вкл':'выкл')}
+function toggleAutoSync(){const on=localStorage.getItem(GH_KEYS.auto)==='1';localStorage.setItem(GH_KEYS.auto,on?'0':'1');updateAutoButton();statusMsg(on?'Автосинхронизация выключена.':'Автосинхронизация включена: после изменений приложение будет пытаться сохранить данные в GitHub.','info')}
+function requireGh(){const c=getGhConfig();if(!c.owner||!c.repo||!c.branch||!c.path||!c.token){throw new Error('Заполни GitHub owner, repo, branch, path и token, потом нажми «Сохранить настройки».')}return c}
+function ghApiUrl(c){return `https://api.github.com/repos/${encodeURIComponent(c.owner)}/${encodeURIComponent(c.repo)}/contents/${c.path.split('/').map(encodeURIComponent).join('/')}?ref=${encodeURIComponent(c.branch)}`}
+function toBase64Unicode(str){return btoa(unescape(encodeURIComponent(str)))}
+function fromBase64Unicode(str){return decodeURIComponent(escape(atob(str.replace(/\n/g,''))))}
+async function githubGetFile(c){const res=await fetch(ghApiUrl(c),{headers:{'Authorization':'Bearer '+c.token,'Accept':'application/vnd.github+json'}});if(res.status===404)return null;if(!res.ok){throw new Error('GitHub GET: '+res.status+' '+await res.text())}return await res.json()}
+async function githubStatusCheck(){try{saveGithubSettings();const c=requireGh();statusMsg('Проверяю связь с GitHub...','info');const file=await githubGetFile(c);statusMsg(file?'Связь есть. Файл данных найден: '+c.path:'Связь есть. Файла данных пока нет, он создастся при сохранении.','ok')}catch(e){statusMsg(e.message,'bad')}}
+async function githubSave(){try{saveGithubSettings();const c=requireGh();statusMsg('Сохраняю прогресс в GitHub...','info');const current=await githubGetFile(c);const data=collectData();const body={message:'Update neurocourse tracker data v3.4',content:toBase64Unicode(JSON.stringify(data,null,2)),branch:c.branch};if(current&&current.sha)body.sha=current.sha;const res=await fetch(ghApiUrl(c).replace(/\?ref=.*/,''),{method:'PUT',headers:{'Authorization':'Bearer '+c.token,'Accept':'application/vnd.github+json','Content-Type':'application/json'},body:JSON.stringify(body)});if(!res.ok){throw new Error('GitHub SAVE: '+res.status+' '+await res.text())}localStorage.setItem(GH_KEYS.last,new Date().toISOString());statusMsg('Готово: прогресс сохранён в GitHub. Теперь на другом устройстве нажми «Загрузить из GitHub».','ok')}catch(e){statusMsg(e.message,'bad')}}
+async function githubLoad(){try{saveGithubSettings();const c=requireGh();statusMsg('Загружаю прогресс из GitHub...','info');const file=await githubGetFile(c);if(!file||!file.content)throw new Error('Файл данных ещё не найден. Сначала сохрани прогресс в GitHub на основном устройстве.');const data=JSON.parse(fromBase64Unicode(file.content));importDataObject(data);localStorage.setItem(GH_KEYS.last,new Date().toISOString());statusMsg('Готово: прогресс загружен из GitHub на это устройство.','ok')}catch(e){statusMsg(e.message,'bad')}}
+function scheduleAutoSync(){if(localStorage.getItem(GH_KEYS.auto)!=='1')return;clearTimeout(autoSyncTimer);autoSyncTimer=setTimeout(()=>githubSave(),1200)}
+
+if(!localStorage.getItem('totalWatchedSec'))localStorage.setItem('totalWatchedSec',String(DEFAULT_TOTAL_WATCHED));
+if(!localStorage.getItem('deadline'))localStorage.setItem('deadline','2026-07-01');
+render();
+fillGithubSettings();
+</script>
+</body>
+</html>
