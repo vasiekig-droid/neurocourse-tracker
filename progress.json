@@ -1,6 +1,6 @@
 {
   "version": "3.6",
-  "updatedAt": "2026-06-06T13:27:57.386Z",
+  "updatedAt": "2026-06-06T13:29:10.879Z",
   "course": [
     {
       "section": "🧭 Введение",
@@ -984,6 +984,13 @@
         "topic": "создание трекера",
         "type": "Домашка",
         "note": "Создавала трекер в котором сейчас работаю для курса. Потратила на это вечер. Параллельно смотрела видео с курса. "
+      },
+      {
+        "date": "2026-06-06",
+        "minutes": 60,
+        "topic": "Нейрофотосессия",
+        "type": "Промпты",
+        "note": ""
       }
     ],
     "prompts": [
@@ -1010,7 +1017,7 @@
       "maxVideoPerDay": 120,
       "softStopPercent": 125,
       "breakEveryMinutes": 45,
-      "eveningMode": "soft"
+      "eveningMode": "normal"
     },
     "restDays": {},
     "busy": []
