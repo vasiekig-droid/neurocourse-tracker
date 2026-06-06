@@ -1,6 +1,6 @@
 {
   "version": "3.9",
-  "updatedAt": "2026-06-06T14:14:39.995Z",
+  "updatedAt": "2026-06-06T14:16:32.288Z",
   "course": [
     {
       "section": "🧭 Введение",
@@ -1119,6 +1119,33 @@
         "end": "19:00",
         "source": "recurring",
         "seriesId": "series_1780755278396_a5958b321bcfa8"
+      },
+      {
+        "date": "2026-06-11",
+        "title": "🇬🇧 Английский",
+        "category": "🇬🇧 Английский",
+        "start": "16:30",
+        "end": "17:30",
+        "source": "recurring",
+        "seriesId": "series_1780755313637_b19508a8c87ad"
+      },
+      {
+        "date": "2026-06-18",
+        "title": "🇬🇧 Английский",
+        "category": "🇬🇧 Английский",
+        "start": "16:30",
+        "end": "17:30",
+        "source": "recurring",
+        "seriesId": "series_1780755313637_b19508a8c87ad"
+      },
+      {
+        "date": "2026-06-25",
+        "title": "🇬🇧 Английский",
+        "category": "🇬🇧 Английский",
+        "start": "16:30",
+        "end": "17:30",
+        "source": "recurring",
+        "seriesId": "series_1780755313637_b19508a8c87ad"
       }
     ],
     "viewingLog": [],
