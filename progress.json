@@ -1,6 +1,6 @@
 {
-  "version": "3.4",
-  "updatedAt": "2026-06-06T13:10:22.844Z",
+  "version": "3.6",
+  "updatedAt": "2026-06-06T13:27:57.386Z",
   "course": [
     {
       "section": "🧭 Введение",
@@ -149,7 +149,8 @@
               "type": "video",
               "title": "Видео 2",
               "duration": "43:43",
-              "status": "todo"
+              "status": "progress",
+              "watched": "12:00"
             },
             {
               "type": "video",
@@ -1000,10 +1001,18 @@
       "2026-06-06": true
     },
     "videoDays": {
-      "2026-06-06": 4198
+      "2026-06-06": 4918
     },
     "settings": {
-      "deadline": "2026-06-30"
-    }
+      "deadline": "2026-06-30",
+      "planStart": "09:00",
+      "planEnd": "21:00",
+      "maxVideoPerDay": 120,
+      "softStopPercent": 125,
+      "breakEveryMinutes": 45,
+      "eveningMode": "soft"
+    },
+    "restDays": {},
+    "busy": []
   }
 }
