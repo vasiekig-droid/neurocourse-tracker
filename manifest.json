@@ -1,9 +1,9 @@
 {
-  "name": "НейроКурс Трекер 3.3",
+  "name": "НейроКурс Трекер 3.4",
   "short_name": "НейроКурс",
-  "start_url": "./index.html",
+  "start_url": "./index.html?v=34",
   "display": "standalone",
   "background_color": "#0f172a",
   "theme_color": "#7c3aed",
-  "description": "Трекер курса со встроенными данными и GitHub-синхронизацией"
+  "description": "Трекер курса 3.4 со встроенными данными, дневной нормой видео и GitHub-синхронизацией"
 }

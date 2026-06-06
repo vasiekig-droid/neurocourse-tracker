@@ -3,206 +3,204 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0f172a">
-<title>НейроКурс Трекер v3.4</title>
+<link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#7c3aed">
+<title>НейроКурс Трекер 3.4 ☁️</title>
 <style>
-:root{
-  --bg:#0f172a;--card:#111827;--card2:#1f2937;--text:#f8fafc;--muted:#94a3b8;--line:#334155;
-  --accent:#60a5fa;--accent2:#a78bfa;--good:#34d399;--warn:#fbbf24;--danger:#fb7185;--white:#ffffff;
-}
-*{box-sizing:border-box} html{scroll-behavior:smooth}
-body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:radial-gradient(circle at 0 0,rgba(96,165,250,.18),transparent 34%),radial-gradient(circle at 100% 0,rgba(167,139,250,.18),transparent 32%),var(--bg);color:var(--text);padding:18px}
-.wrapper{max-width:1180px;margin:0 auto}.header{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;margin-bottom:16px}
-h1{margin:0 0 6px;font-size:clamp(26px,5vw,38px);letter-spacing:-.04em}.subtitle{color:var(--muted);line-height:1.45}.badge{background:rgba(96,165,250,.15);border:1px solid rgba(96,165,250,.35);padding:10px 12px;border-radius:999px;color:#bfdbfe;white-space:nowrap}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:14px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:14px}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:14px}
-.card{background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.024));border:1px solid rgba(148,163,184,.18);box-shadow:0 18px 55px rgba(0,0,0,.25);border-radius:20px;padding:18px}.solid{background:rgba(31,41,55,.92)}.big{grid-column:span 2}.label{color:var(--muted);font-size:14px;margin-bottom:8px}.value{font-size:clamp(25px,4vw,34px);font-weight:850;letter-spacing:-.04em}.value.small{font-size:24px}.hint{color:var(--muted);font-size:13px;margin-top:8px;line-height:1.45}.progress{height:18px;background:rgba(148,163,184,.18);border-radius:999px;overflow:hidden;margin:12px 0 4px}.fill{height:100%;width:0%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:999px;transition:.25s}.fill.good{background:linear-gradient(90deg,var(--good),#86efac)}.fill.warn{background:linear-gradient(90deg,var(--warn),#fde68a)}.fill.danger{background:linear-gradient(90deg,var(--danger),#fda4af)}
-.controls{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;align-items:end}.field label{display:block;color:var(--muted);font-size:13px;margin-bottom:6px}input,textarea,select{width:100%;padding:12px;border:none;border-radius:13px;background:#e5e7eb;color:#111827;font-size:16px}textarea{min-height:104px;resize:vertical}button{padding:12px 14px;border:none;border-radius:13px;cursor:pointer;background:linear-gradient(90deg,var(--accent),var(--accent2));color:white;font-weight:760;font-size:15px}button:hover{filter:brightness(1.05)}.ghost{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16)}.goodBtn{background:linear-gradient(90deg,#10b981,#34d399)}.dangerBtn{background:linear-gradient(90deg,#e11d48,#fb7185)}.quick{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.quick button{padding:10px 12px;font-size:14px}
-table{width:100%;border-collapse:collapse;margin-top:6px}th,td{padding:11px 9px;border-bottom:1px solid rgba(148,163,184,.18);text-align:left;vertical-align:middle}th{color:var(--muted);font-weight:650;background:rgba(255,255,255,.04)}tr:last-child td{border-bottom:none}.status{white-space:nowrap}.mini{height:10px;background:rgba(148,163,184,.2);border-radius:999px;overflow:hidden}.mini span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:999px}.note{margin-top:12px;padding:12px;border-radius:15px;background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.25);color:#fde68a;line-height:1.45}.ok{background:rgba(52,211,153,.1);border-color:rgba(52,211,153,.25);color:#bbf7d0}.bad{background:rgba(251,113,133,.1);border-color:rgba(251,113,133,.25);color:#fecdd3}.pill{display:inline-flex;align-items:center;gap:6px;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.08);color:#dbeafe;font-size:13px;margin:4px 4px 0 0}.syncStatus{padding:10px 12px;border-radius:13px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:#dbeafe;margin-top:10px;font-size:13px;line-height:1.45}.secret{font-family:monospace}.footer{color:var(--muted);font-size:13px;text-align:center;margin:22px 0 8px}
-@media(max-width:900px){body{padding:12px}.grid,.grid3,.grid2,.controls{grid-template-columns:1fr}.big{grid-column:span 1}.header{flex-direction:column}.badge{white-space:normal}.card{padding:15px}table{font-size:14px}th,td{padding:9px 6px}.hideMobile{display:none}}
+:root{--bg:#0f172a;--card:#111827;--card2:#1f2937;--text:#f8fafc;--muted:#cbd5e1;--line:rgba(255,255,255,.11);--a:#8b5cf6;--b:#22c55e}
+*{box-sizing:border-box}body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:radial-gradient(circle at 0 0,rgba(139,92,246,.35),transparent 34%),radial-gradient(circle at 100% 0,rgba(34,197,94,.18),transparent 30%),var(--bg);color:var(--text)}.app{max-width:1220px;margin:auto;padding:18px}.top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;position:sticky;top:0;background:linear-gradient(180deg,var(--bg),rgba(15,23,42,.88));backdrop-filter:blur(10px);z-index:10;padding:14px 0}h1{margin:0;font-size:28px}.small{color:var(--muted);font-size:14px}button,.filelabel{border:0;border-radius:12px;padding:9px 12px;background:var(--card2);color:var(--text);cursor:pointer;font-weight:700}.primary{background:linear-gradient(90deg,var(--a),#4f46e5)}.good{background:#166534}.warn{background:#854d0e}.danger{background:#9f1239}input[type=file]{display:none}.actions,.nav,.tabs{display:flex;gap:8px;flex-wrap:wrap}.nav{margin:16px 0}.nav button.active,.tab.active{background:linear-gradient(90deg,var(--a),#4f46e5)}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:12px 0}.quickBtns{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.ghost{background:rgba(255,255,255,.08)}.card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.025));border:1px solid var(--line);border-radius:22px;padding:16px;box-shadow:0 18px 50px rgba(0,0,0,.24);margin:12px 0}.metric{font-size:27px;font-weight:900;margin-top:6px}.bar{height:18px;background:rgba(255,255,255,.1);border-radius:999px;overflow:hidden;margin-top:12px}.fill{height:100%;background:linear-gradient(90deg,var(--a),var(--b));width:0%;transition:.25s}.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}.pill{display:inline-flex;gap:6px;align-items:center;background:rgba(255,255,255,.08);border:1px solid var(--line);padding:6px 9px;border-radius:999px;font-size:13px;color:var(--muted);margin:3px}.hidden{display:none}input,textarea,select{border:1px solid var(--line);background:#0b1220;color:var(--text);border-radius:12px;padding:10px;font-family:inherit}textarea{width:100%;min-height:80px}.search{width:100%;margin:8px 0}.item{display:grid;grid-template-columns:44px 1fr 120px 135px 185px;gap:10px;align-items:center;padding:10px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.035);margin:7px 0}.type{font-size:22px;text-align:center}.title{font-weight:750}.duration{color:var(--muted)}.status{font-weight:900}.controls{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}.mini{padding:6px 8px;border-radius:9px;font-size:12px}.timeInput{width:80px}table{width:100%;border-collapse:collapse}td,th{padding:10px;border-bottom:1px solid var(--line);text-align:left}th{color:var(--muted)}.miniBar{height:10px;background:rgba(255,255,255,.1);border-radius:99px;overflow:hidden}.miniFill{height:100%;background:linear-gradient(90deg,var(--a),var(--b))}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.listCard{border:1px solid var(--line);border-radius:16px;padding:12px;margin:8px 0;background:rgba(255,255,255,.035)}.row{display:flex;justify-content:space-between;gap:10px}.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}.day{min-height:62px;border:1px solid var(--line);border-radius:12px;padding:8px;background:rgba(255,255,255,.035)}.doneDay{background:rgba(34,197,94,.16);border-color:rgba(34,197,94,.45)}.today{outline:2px solid var(--a)}@media(max-width:920px){.grid,.cards,.formgrid{grid-template-columns:1fr}.item{grid-template-columns:34px 1fr}.duration,.status,.controls{grid-column:2}.top{position:static;flex-direction:column}.calendar{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
-<div class="wrapper">
-  <div class="header">
-    <div><h1>📚 НейроКурс Трекер</h1><div class="subtitle">Версия 3.4: дневная норма, история просмотра и синхронизация телефона/компьютера через GitHub.</div></div>
-    <div class="badge"><div id="todayBadge">Сегодня</div><div style="font-size:12px;margin-top:3px;opacity:.85">v3.4 · GitHub Sync</div></div>
-  </div>
+<div class="app">
+<div class="top"><div><h1>🧠 НейроКурс Трекер 3.4 ☁️</h1><div class="small">Встроенный курс + GitHub-синхронизация + дневная норма просмотра видео.</div></div><div class="actions"><button onclick="openSyncSettings()">☁️ Синхронизация</button><button onclick="cloudPull()">⬇️ Из облака</button><button onclick="cloudPush()">⬆️ В облако</button><button onclick="exportAll()">⬇️ Бэкап</button><label class="filelabel">⬆️ Восстановить<input type="file" id="importFile" accept=".json"></label><button onclick="hardReset()" class="danger">♻️ Сбросить и загрузить курс</button></div></div>
 
-  <div class="grid">
-    <div class="card big">
-      <div class="label">Общий прогресс по видео</div><div class="value" id="overallPct">0%</div>
-      <div class="progress"><div id="overallFill" class="fill"></div></div><div class="hint" id="overallHint"></div>
-    </div>
-    <div class="card"><div class="label">Всего просмотрено</div><div class="value small" id="watchedTotalLabel">0 мин</div><div class="hint">Стартовое значение: 2 ч 29 мин.</div></div>
-    <div class="card"><div class="label">Всего осталось</div><div class="value small" id="remainingTotalLabel">0 мин</div><div class="hint">Пересчитывается после каждого добавления.</div></div>
-  </div>
+<div id="syncModal" class="card hidden" style="border-color:rgba(56,189,248,.45)">
+<h2>☁️ Синхронизация через GitHub</h2>
+<div class="small">Нужно один раз ввести данные. Прогресс будет храниться в файле <b>progress.json</b> в твоём репозитории.</div>
+<div class="formgrid" style="margin-top:10px">
+  <input id="syncOwner" placeholder="GitHub логин, например vasiekig-droid">
+  <input id="syncRepo" placeholder="Репозиторий, например neurocourse-tracker">
+  <input id="syncBranch" placeholder="Ветка, обычно main">
+  <input id="syncToken" placeholder="GitHub token">
+</div>
+<div class="small" style="margin-top:8px">Токен хранится только в браузере этого устройства. Не публикуй его в GitHub и не отправляй никому.</div>
+<div class="actions" style="margin-top:10px;justify-content:flex-start">
+  <button class="primary" onclick="saveSyncSettings()">💾 Сохранить настройки</button>
+  <button onclick="cloudPull()">⬇️ Загрузить прогресс</button>
+  <button onclick="cloudPush()">⬆️ Сохранить прогресс</button>
+  <button onclick="closeSyncSettings()">Закрыть</button>
+</div>
+<div id="syncStatus" class="small" style="margin-top:8px"></div>
+</div>
 
-  <div class="grid3">
-    <div class="card solid"><div class="label">🎯 Нужно смотреть в день</div><div class="value" id="dailyNeedLabel">0 мин</div><div class="hint" id="daysLeftLabel"></div></div>
-    <div class="card solid"><div class="label">👀 Сегодня уже просмотрено</div><div class="value" id="todayWatchedLabel">0 мин</div><div class="progress"><div id="todayFill" class="fill good"></div></div></div>
-    <div class="card solid"><div class="label">⏳ Осталось сегодня</div><div class="value" id="todayRemainingLabel">0 мин</div><div class="hint" id="todayMood"></div></div>
-  </div>
-
-  <div class="grid3">
-    <div class="card"><div class="label">🔥 Серия занятий</div><div class="value small" id="streakLabel">0 дней</div><div class="hint">Считает дни, когда ты добавляла просмотр.</div></div>
-    <div class="card"><div class="label">📈 Среднее за 7 дней</div><div class="value small" id="avg7Label">0 мин</div><div class="hint">Помогает понять реальный темп, а не магию понедельника.</div></div>
-    <div class="card"><div class="label">🏁 Прогноз финиша</div><div class="value small" id="forecastLabel">—</div><div class="hint" id="forecastHint">По твоему среднему темпу.</div></div>
-  </div>
-
-  <div class="card">
-    <h3>➕ Добавить просмотр за сегодня</h3>
-    <div class="controls">
-      <div class="field"><label>Добавить время, формат ч:мм или мм</label><input id="addInput" placeholder="например 0:30 или 30"></div>
-      <div class="field"><label>Всего просмотрено вручную</label><input id="totalWatchedInput" placeholder="например 2:29"></div>
-      <div class="field"><label>Дедлайн</label><input id="deadlineInput" type="date"></div>
-      <button onclick="addWatched()">➕ Добавить</button>
-    </div>
-    <div class="quick">
-      <button class="ghost" onclick="quickAdd(10)">+10 мин</button><button class="ghost" onclick="quickAdd(15)">+15 мин</button><button class="ghost" onclick="quickAdd(20)">+20 мин</button><button class="ghost" onclick="quickAdd(30)">+30 мин</button><button class="goodBtn" onclick="saveManual()">💾 Сохранить вручную</button><button class="ghost" onclick="resetToday()">🧹 Обнулить сегодня</button>
-    </div>
-    <div class="note" id="saveNote">Добавь просмотр, и трекер сам прибавит его к сегодняшнему дню и общему прогрессу.</div>
-  </div>
-
-  <div class="grid2">
-    <div class="card">
-      <h3>🔥 Сейчас в работе: Higgsfield</h3>
-      <div class="controls" style="grid-template-columns:1fr 1fr">
-        <div class="field"><label>Higgsfield просмотрено</label><input id="higgsInput" placeholder="например 59:15"></div>
-        <button onclick="saveHiggs()">💾 Сохранить</button>
-      </div>
-      <div class="progress"><div id="higgsFill" class="fill warn"></div></div><div class="hint" id="higgsInfo"></div>
-    </div>
-    <div class="card">
-      <h3>📝 Заметка на сегодня</h3>
-      <textarea id="todayNote" placeholder="Например: посмотрела часть урока, домашку перенести на завтра"></textarea>
-      <div class="quick"><button onclick="saveNote()">💾 Сохранить заметку</button><button class="ghost" onclick="clearNote()">Очистить</button></div>
-      <div class="hint">Заметка сохраняется отдельно для сегодняшней даты.</div>
-    </div>
-  </div>
-
-  <div class="card">
-    <h3>📅 История последних дней</h3>
-    <table><thead><tr><th>Дата</th><th>Просмотрено</th><th class="hideMobile">Заметка</th></tr></thead><tbody id="historyBody"></tbody></table>
-  </div>
-
-  <div class="card">
-    <h3>📊 Разделы курса</h3>
-    <table>
-      <thead><tr><th>Раздел</th><th>Длительность</th><th>Статус</th><th>Прогресс</th></tr></thead>
-      <tbody id="sectionsBody"></tbody>
-    </table>
-    <div class="hint">Статусы пока справочные. Просмотр считается по общему времени и текущему уроку.</div>
-  </div>
-
-
-  <div class="card">
-    <h3>☁️ GitHub Sync: телефон + компьютер</h3>
-    <div class="hint">Это та самая схема с токеном: приложение сохраняет данные в отдельный файл репозитория, а телефон и компьютер читают один и тот же прогресс. Токен хранится только в браузере на твоём устройстве, не в коде сайта.</div>
-    <div class="controls" style="margin-top:12px">
-      <div class="field"><label>GitHub username / owner</label><input id="ghOwner" placeholder="например vasiekig"></div>
-      <div class="field"><label>Репозиторий</label><input id="ghRepo" placeholder="например neurocourse-tracker"></div>
-      <div class="field"><label>Ветка</label><input id="ghBranch" placeholder="main"></div>
-      <div class="field"><label>Файл данных</label><input id="ghPath" placeholder="tracker-data.json"></div>
-    </div>
-    <div class="controls" style="grid-template-columns:2fr 1fr 1fr 1fr;margin-top:12px">
-      <div class="field"><label>Fine-grained token</label><input id="ghToken" class="secret" type="password" placeholder="github_pat_... или ghp_..."></div>
-      <button onclick="saveGithubSettings()">💾 Сохранить настройки</button>
-      <button class="ghost" onclick="toggleTokenVisibility()">👁️ Токен</button>
-      <button class="ghost" onclick="clearGithubSettings()">🧹 Очистить</button>
-    </div>
-    <div class="quick">
-      <button class="goodBtn" onclick="githubSave()">⬆️ Сохранить в GitHub</button>
-      <button onclick="githubLoad()">⬇️ Загрузить из GitHub</button>
-      <button class="ghost" onclick="githubStatusCheck()">🔎 Проверить связь</button>
-      <button class="ghost" onclick="toggleAutoSync()" id="autoSyncBtn">Автосинхронизация: выкл</button>
-    </div>
-    <div class="syncStatus" id="syncStatus">GitHub Sync ещё не настроен. Заполни поля, сохрани настройки, потом нажми «Сохранить в GitHub» на компьютере и «Загрузить из GitHub» на телефоне.</div>
-    <div class="note bad">Важно: не вставляй токен прямо в файл <b>index.html</b> перед публикацией. Вводи его только в поле на открытом сайте. Для токена достаточно доступа Contents: Read and Write только к этому репозиторию.</div>
-  </div>
-
-  <div class="card">
-    <h3>🔁 Резервная копия вручную</h3>
-    <div class="grid2">
-      <div>
-        <div class="hint">Это запасной способ, если GitHub Sync временно капризничает. Можно скачать backup и импортировать его на другом устройстве вручную.</div>
-        <div class="quick"><button onclick="downloadBackup()">⬇️ Скачать backup</button><button class="ghost" onclick="copyBackup()">📋 Скопировать backup</button><button class="dangerBtn" onclick="factoryReset()">Сбросить всё</button></div>
-      </div>
-      <div>
-        <textarea id="importBox" placeholder="Вставь сюда backup JSON и нажми импорт"></textarea>
-        <div class="quick"><button onclick="importBackup()">⬆️ Импортировать</button></div>
-      </div>
-    </div>
-    <div class="note bad">Не публикуй backup в открытый GitHub, если будешь писать туда личные заметки. Сам файл приложения можно публиковать спокойно.</div>
-  </div>
-
-  <div class="footer">НейроКурс Трекер v3.4 · GitHub Sync · 33 учебные ссылки под контролем 🧭</div>
+<div class="nav"><button class="active" onclick="showPage('dashboard',this)">📊 Главная</button><button onclick="showPage('course',this)">📚 Курс</button><button onclick="showPage('practice',this)">⏱️ Практика</button><button onclick="showPage('calendar',this)">📅 Календарь</button><button onclick="showPage('prompts',this)">🪄 Промпты</button><button onclick="showPage('portfolio',this)">🖼️ Портфолио</button><button onclick="showPage('ideas',this)">💰 Идеи</button></div>
+<section id="dashboard"><div class="cards"><div class="card"><div class="small">Общий прогресс задач</div><div class="metric" id="overallPct">0%</div><div class="bar"><div class="fill" id="overallFill"></div></div></div><div class="card"><div class="small">Видео просмотрено</div><div class="metric" id="watchedTime">0</div></div><div class="card"><div class="small">Осталось видео</div><div class="metric" id="leftTime">0</div></div><div class="card"><div class="small">Задачи закрыты</div><div class="metric" id="taskCount">0/0</div></div><div class="card"><div class="small">🎯 Нужно смотреть сегодня</div><div class="metric" id="dailyGoalTime">—</div></div><div class="card"><div class="small">👀 Сегодня просмотрено</div><div class="metric" id="todayVideoTime">—</div><div class="bar"><div class="fill" id="todayVideoFill"></div></div></div><div class="card"><div class="small">⏳ Осталось сегодня</div><div class="metric" id="todayLeftTime">—</div></div><div class="card"><div class="small">🗓️ Прогноз финиша</div><div class="metric" id="forecastDate">—</div></div></div><div class="grid"><div class="card"><div class="small">🔥 Что делать сегодня</div><h2 id="todayTitle">—</h2><div id="todayList"></div><div class="bar"><div class="fill" id="focusFill"></div></div></div><div class="card"><div class="small">📅 План до дедлайна</div><h2 id="dailyNeed">—</h2><div class="small" style="margin:8px 0">Дедлайн: <input type="date" id="deadlineInput" onchange="setDeadline(this.value)" style="max-width:170px"></div><div id="planText" class="small"></div><div class="quickBtns"><button onclick="addViewingToActive(10)">+10 мин</button><button onclick="addViewingToActive(15)">+15 мин</button><button onclick="addViewingToActive(20)">+20 мин</button><button onclick="addViewingToActive(30)">+30 мин</button></div><div class="quickBtns"><input type="number" id="manualVideoMinutes" placeholder="минут" style="width:110px"><button class="primary" onclick="addViewingToActive(+manualVideoMinutes.value||0); manualVideoMinutes.value=''">➕ Добавить просмотр</button></div><div id="activeVideoText" class="small" style="margin-top:8px"></div><div id="todayHistory" class="small" style="margin-top:8px"></div><div id="typeStats" style="margin-top:8px"></div></div></div><div class="card"><h2>📊 Прогресс по разделам</h2><table><thead><tr><th>Раздел</th><th>Статус</th><th>Прогресс</th></tr></thead><tbody id="sectionTable"></tbody></table></div></section>
+<section id="course" class="hidden"><input class="search" id="search" placeholder="🔎 Найти урок, гайд или домашку..."><div class="tabs" id="tabs"></div><div id="sectionBox"></div></section>
+<section id="practice" class="hidden"><div class="card"><h2>⏱️ Учёт практики</h2><div class="formgrid"><input type="date" id="prDate"><input type="number" id="prMinutes" placeholder="Минут практики"><input id="prTopic" placeholder="Тема"><select id="prType"><option>Промпты</option><option>Генерации</option><option>Домашка</option><option>Постобработка</option><option>Портфолио</option></select></div><textarea id="prNote" placeholder="Заметка"></textarea><button class="primary" onclick="addPractice()">➕ Добавить практику</button><div id="practiceList"></div></div></section>
+<section id="calendar" class="hidden"><div class="card"><h2>📅 Календарь занятий</h2><div id="calendarBox" class="calendar"></div></div></section>
+<section id="prompts" class="hidden"><div class="card"><h2>🪄 База промптов</h2><div class="formgrid"><input id="promptTitle" placeholder="Название"><input id="promptTool" placeholder="Инструмент"></div><textarea id="promptText" placeholder="Промпт"></textarea><button class="primary" onclick="addPrompt()">➕ Сохранить</button><div id="promptList"></div></div></section>
+<section id="portfolio" class="hidden"><div class="card"><h2>🖼️ Портфолио</h2><div class="formgrid"><input id="workTitle" placeholder="Название"><input id="workLink" placeholder="Ссылка"></div><textarea id="workNote" placeholder="Заметка"></textarea><button class="primary" onclick="addWork()">➕ Добавить</button><div id="workList"></div></div></section>
+<section id="ideas" class="hidden"><div class="card"><h2>💰 Идеи заработка</h2><input id="ideaTitle" placeholder="Идея"><textarea id="ideaNote" placeholder="Описание"></textarea><button class="primary" onclick="addIdea()">➕ Добавить</button><div id="ideaList"></div></div></section>
 </div>
 <script>
-const COURSE_TOTAL = toSec('28:45:15');
-const DEFAULT_TOTAL_WATCHED = toSec('2:29:00');
-const HIGGS_TOTAL = toSec('2:14:27');
-const todayKey = localDateKey(new Date());
-const sections = [
-  ['🧭 Введение','5:58','✅ Сделано',100],['💳 Оплата нейронок','гайд','✅ Сделано',100],['🧠 Обзоры нейросетей','8:30:59','🔵 В процессе',29.2],['🎨 Нейрофотосессия человека','2:52:17','⬜ Не начато',0],['🛍️ Нейрофотосессия товаров','4:01:08','⬜ Не начато',0],['🎬 Создание видеороликов','3:18:15','⬜ Не начато',0],['💰 Заработок на нейронках','7:21:28','⬜ Не начато',0],['🎨 Midjourney от А до Я','2:35:10','⬜ Не начато',0],['📚 Библиотека','18 гайдов','⬜ Не начато',0]
-];
-function localDateKey(d){const y=d.getFullYear();const m=String(d.getMonth()+1).padStart(2,'0');const day=String(d.getDate()).padStart(2,'0');return `${y}-${m}-${day}`}
-function toSec(t){if(!t)return 0;t=String(t).trim().replace(',', '.');if(/^\d+$/.test(t))return Number(t)*60;let p=t.split(':').map(Number);if(p.some(isNaN))return 0;if(p.length===2)return p[0]*3600+p[1]*60;if(p.length===3)return p[0]*3600+p[1]*60+p[2];return 0}
-function fmt(sec){sec=Math.max(0,Math.round(sec));let h=Math.floor(sec/3600),m=Math.floor((sec%3600)/60),s=sec%60;if(h>0&&s>0)return `${h} ч ${m} мин ${s} сек`;if(h>0)return `${h} ч ${m} мин`;if(m>0)return `${m} мин`;return `${s} сек`}
-function hm(sec){sec=Math.max(0,Math.round(sec));let h=Math.floor(sec/3600),m=Math.floor((sec%3600)/60);return `${h}:${String(m).padStart(2,'0')}`}
-function pct(a,b){return b?Math.min(100,Math.max(0,a/b*100)):0}
-function daysUntil(deadline){const now=new Date();const start=new Date(now.getFullYear(),now.getMonth(),now.getDate());const end=new Date(deadline+'T00:00:00');return Math.max(1,Math.ceil((end-start)/86400000)+1)}
-function getDeadline(){return localStorage.getItem('deadline')||'2026-07-01'}
-function getTodayWatched(){return Number(localStorage.getItem('day_'+todayKey)||0)}
-function getTotalWatched(){return Number(localStorage.getItem('totalWatchedSec')||DEFAULT_TOTAL_WATCHED)}
-function getHiggsWatched(){return Number(localStorage.getItem('higgsWatchedSec')||toSec('59:15'))}
-function setDay(date,sec){localStorage.setItem('day_'+date, String(Math.max(0,sec)))}
-function getNote(date){return localStorage.getItem('note_'+date)||''}
-function getLastNDates(n){const out=[];const d=new Date();for(let i=0;i<n;i++){const x=new Date(d);x.setDate(d.getDate()-i);out.push(localDateKey(x))}return out}
-function renderSections(){document.getElementById('sectionsBody').innerHTML=sections.map(s=>`<tr><td>${s[0]}</td><td>${s[1]}</td><td class="status">${s[2]}</td><td><div class="mini"><span style="width:${s[3]}%"></span></div></td></tr>`).join('')}
-function calcStreak(){let streak=0;const d=new Date();for(let i=0;i<365;i++){const x=new Date(d);x.setDate(d.getDate()-i);if(Number(localStorage.getItem('day_'+localDateKey(x))||0)>0)streak++;else break}return streak}
-function avg7(){const dates=getLastNDates(7);return dates.reduce((sum,k)=>sum+Number(localStorage.getItem('day_'+k)||0),0)/7}
-function forecastFinish(remaining){const avg=avg7();if(avg<=0)return null;const days=Math.ceil(remaining/avg);const d=new Date();d.setDate(d.getDate()+days);return {days,date:d}}
-function renderHistory(){const rows=getLastNDates(10).map(k=>{const sec=Number(localStorage.getItem('day_'+k)||0);const note=getNote(k);return `<tr><td>${new Date(k+'T00:00:00').toLocaleDateString('ru-RU')}</td><td>${fmt(sec)}</td><td class="hideMobile">${note?escapeHtml(note):'—'}</td></tr>`}).join('');document.getElementById('historyBody').innerHTML=rows}
-function escapeHtml(str){return String(str).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#039;','"':'&quot;'}[c]))}
-function render(){const deadline=getDeadline();const totalWatched=Math.min(COURSE_TOTAL,getTotalWatched());const remaining=Math.max(0,COURSE_TOTAL-totalWatched);const days=daysUntil(deadline);const dailyNeed=remaining/days;const todayWatched=getTodayWatched();const todayRemaining=Math.max(0,dailyNeed-todayWatched);const todayPercent=pct(todayWatched,dailyNeed);const overallPercent=pct(totalWatched,COURSE_TOTAL);const higgsWatched=Math.min(HIGGS_TOTAL,getHiggsWatched());const higgsPercent=pct(higgsWatched,HIGGS_TOTAL);document.getElementById('todayBadge').innerText=`Сегодня: ${new Date().toLocaleDateString('ru-RU')}`;document.getElementById('overallPct').innerText=overallPercent.toFixed(1)+'%';document.getElementById('overallFill').style.width=overallPercent+'%';document.getElementById('overallHint').innerHTML=`Всего видео: <span class="pill">${fmt(COURSE_TOTAL)}</span> Осталось: <span class="pill">${fmt(remaining)}</span>`;document.getElementById('watchedTotalLabel').innerText=fmt(totalWatched);document.getElementById('remainingTotalLabel').innerText=fmt(remaining);document.getElementById('dailyNeedLabel').innerText=fmt(dailyNeed);document.getElementById('daysLeftLabel').innerText=`До ${new Date(deadline+'T00:00:00').toLocaleDateString('ru-RU')} осталось дней: ${days}.`;document.getElementById('todayWatchedLabel').innerText=fmt(todayWatched);document.getElementById('todayFill').style.width=Math.min(100,todayPercent)+'%';document.getElementById('todayRemainingLabel').innerText=todayRemaining>0?fmt(todayRemaining):'норма закрыта ✅';document.getElementById('todayMood').innerText=todayRemaining>0?'Ещё немного, и дневной план будет закрыт.':'Сегодняшний план выполнен. Можно спокойно переключаться на домашку или отдых.';document.getElementById('totalWatchedInput').value=hm(totalWatched);document.getElementById('deadlineInput').value=deadline;document.getElementById('higgsInput').value=hm(higgsWatched);document.getElementById('higgsFill').style.width=higgsPercent+'%';document.getElementById('higgsInfo').innerText=`Просмотрено: ${fmt(higgsWatched)} из ${fmt(HIGGS_TOTAL)}. Осталось: ${fmt(HIGGS_TOTAL-higgsWatched)}. Прогресс урока: ${higgsPercent.toFixed(1)}%.`;document.getElementById('todayNote').value=getNote(todayKey);document.getElementById('streakLabel').innerText=calcStreak()+' дн.';document.getElementById('avg7Label').innerText=fmt(avg7());const f=forecastFinish(remaining);document.getElementById('forecastLabel').innerText=f?f.date.toLocaleDateString('ru-RU'):'—';document.getElementById('forecastHint').innerText=f?`Если держать средний темп, финиш примерно через ${f.days} дн.`:'Появится после нескольких дней просмотра.';const note=document.getElementById('saveNote');note.className='note '+(todayRemaining<=0?'ok':'');note.innerText=todayRemaining<=0?'Дневная норма закрыта. Отличная галочка в журнале ✅':`Сегодня осталось посмотреть ${fmt(todayRemaining)} из дневной нормы ${fmt(dailyNeed)}.`;renderHistory();renderSections()}
-function addWatched(){const add=toSec(document.getElementById('addInput').value);if(add<=0){alert('Введи время, например 15 или 0:15');return}setDay(todayKey,getTodayWatched()+add);localStorage.setItem('totalWatchedSec',String(Math.min(COURSE_TOTAL,getTotalWatched()+add)));document.getElementById('addInput').value='';render();scheduleAutoSync()}
-function quickAdd(min){document.getElementById('addInput').value=String(min);addWatched()}
-function saveManual(){const manual=toSec(document.getElementById('totalWatchedInput').value);if(manual>0)localStorage.setItem('totalWatchedSec',String(Math.min(COURSE_TOTAL,manual)));localStorage.setItem('deadline',document.getElementById('deadlineInput').value||'2026-07-01');render();scheduleAutoSync()}
-function saveHiggs(){const sec=toSec(document.getElementById('higgsInput').value);localStorage.setItem('higgsWatchedSec',String(Math.min(HIGGS_TOTAL,sec)));render();scheduleAutoSync()}
-function resetToday(){if(confirm('Обнулить просмотр за сегодня?')){setDay(todayKey,0);render();scheduleAutoSync()}}
-function saveNote(){localStorage.setItem('note_'+todayKey,document.getElementById('todayNote').value||'');render();scheduleAutoSync()}
-function clearNote(){localStorage.removeItem('note_'+todayKey);render();scheduleAutoSync()}
-function collectData(){const data={version:'3.4',app:'neurocourse-tracker',exportedAt:new Date().toISOString(),items:{}};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k&&(/^(day_|note_|totalWatchedSec|deadline|higgsWatchedSec)/.test(k)))data.items[k]=localStorage.getItem(k)}return data}
-function downloadBackup(){const blob=new Blob([JSON.stringify(collectData(),null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='neurocourse-tracker-backup.json';a.click();URL.revokeObjectURL(a.href)}
-async function copyBackup(){const text=JSON.stringify(collectData(),null,2);try{await navigator.clipboard.writeText(text);alert('Backup скопирован.')}catch(e){document.getElementById('importBox').value=text;alert('Не получилось скопировать автоматически, я вывел backup в поле импорта.')}}
-function importDataObject(data){if(!data||!data.items)throw new Error('bad-data');Object.entries(data.items).forEach(([k,v])=>localStorage.setItem(k,String(v)));render()}
-function importBackup(){try{const raw=document.getElementById('importBox').value.trim();const data=JSON.parse(raw);importDataObject(data);document.getElementById('importBox').value='';scheduleAutoSync();alert('Данные импортированы.')}catch(e){alert('Не удалось импортировать. Проверь, что вставлен backup JSON целиком.')}}
-function factoryReset(){if(confirm('Точно сбросить все данные трекера на этом устройстве?')){Object.keys(localStorage).filter(k=>/^(day_|note_|totalWatchedSec|deadline|higgsWatchedSec)/.test(k)).forEach(k=>localStorage.removeItem(k));render();scheduleAutoSync()}}
+const DEFAULT_COURSE = [{"section": "🧭 Введение", "lessons": [{"title": "Введение", "items": [{"type": "video", "title": "Введение", "duration": "5:58", "status": "done", "watched": "5:58"}]}]}, {"section": "💳 Как оплачивать нейронки без иностранных карт", "lessons": [{"title": "Оплата нейронок", "items": [{"type": "guide", "title": "Как оплатить нейронки", "duration": "", "status": "done"}]}]}, {"section": "🧠 Обзоры нейросетей", "lessons": [{"title": "ChatGPT", "items": [{"type": "video", "title": "Видео 1", "duration": "32:24", "status": "done", "watched": "32:24"}, {"type": "video", "title": "Видео 2", "duration": "30:37", "status": "done", "watched": "30:37"}, {"type": "guide", "title": "Гайд 1", "duration": "", "status": "done"}, {"type": "guide", "title": "Гайд 2", "duration": "", "status": "done"}, {"type": "guide", "title": "Гайд 3", "duration": "", "status": "done"}, {"type": "homework", "title": "Ознакомиться внимательно с PDF-файлами", "duration": "", "status": "done"}, {"type": "homework", "title": "Познакомиться с ChatGPT и его возможностями", "duration": "", "status": "done"}, {"type": "homework", "title": "Настроить ChatGPT под себя", "duration": "", "status": "done"}, {"type": "homework", "title": "Пообщаться в разных чатах, задавая разные роли", "duration": "", "status": "done"}, {"type": "homework", "title": "Исследовать GPT-агентов по сфере или интересам", "duration": "", "status": "done"}, {"type": "star", "title": "Исследовать другие текстовые нейронки", "duration": "", "status": "done"}, {"type": "star", "title": "Сравнить другие нейронки с ChatGPT", "duration": "", "status": "done"}]}, {"title": "Higgsfield", "items": [{"type": "video", "title": "Видео", "duration": "2:14:27", "status": "progress", "watched": "59:15"}, {"type": "guide", "title": "Гайд", "duration": "", "status": "todo"}]}, {"title": "Syntx", "items": [{"type": "video", "title": "Видео 1", "duration": "16:04", "status": "todo"}, {"type": "video", "title": "Видео 2", "duration": "43:43", "status": "todo"}, {"type": "video", "title": "Видео 3", "duration": "34:38", "status": "todo"}, {"type": "guide", "title": "Гайд", "duration": "", "status": "todo"}]}, {"title": "Runway", "items": [{"type": "video", "title": "Видео", "duration": "55:50", "status": "todo"}, {"type": "guide", "title": "Гайд", "duration": "", "status": "todo"}]}, {"title": "Kling", "items": [{"type": "video", "title": "Видео", "duration": "1:35:44", "status": "todo"}, {"type": "guide", "title": "Гайд", "duration": "", "status": "todo"}]}, {"title": "ZenCreator", "items": [{"type": "video", "title": "Видео", "duration": "1:07:32", "status": "todo"}, {"type": "guide", "title": "Гайд", "duration": "", "status": "todo"}]}]}, {"section": "🎨 Нейрофотосессия человека", "lessons": [{"title": "Обязательная подготовка", "items": [{"type": "video", "title": "Видео 1", "duration": "20:49", "status": "todo"}, {"type": "video", "title": "Видео 2", "duration": "23:42", "status": "todo"}, {"type": "guide", "title": "Гайд 1", "duration": "", "status": "todo"}, {"type": "guide", "title": "Гайд 2", "duration": "", "status": "todo"}, {"type": "homework", "title": "Подготовить датасет", "duration": "", "status": "todo"}, {"type": "homework", "title": "Подобрать минимум 10 референсов", "duration": "", "status": "todo"}, {"type": "homework", "title": "Сохранить референсы на компьютере", "duration": "", "status": "todo"}, {"type": "homework", "title": "Прописать промпты к референсам", "duration": "", "status": "todo"}, {"type": "star", "title": "Придумать идею фотосессии с ChatGPT", "duration": "", "status": "todo"}, {"type": "star", "title": "Проработать промпты по идее", "duration": "", "status": "todo"}]}, {"title": "Фотосессия с помощью Higgsfield", "items": [{"type": "video", "title": "Видео 1", "duration": "2:43", "status": "todo"}, {"type": "video", "title": "Видео 2", "duration": "47:10", "status": "todo"}, {"type": "video", "title": "Видео 3", "duration": "1:05:00", "status": "todo"}, {"type": "guide", "title": "Гайд", "duration": "", "status": "todo"}, {"type": "homework", "title": "Провести фотосессию по подготовленным промптам", "duration": "", "status": "todo"}, {"type": "homework", "title": "Сделать фото в Superjet", "duration": "", "status": "todo"}, {"type": "homework", "title": "Выложить работу в Telegram-группу «Ваши работы фото»", "duration": "", "status": "todo"}]}, {"title": "Постобработка фотосессий", "items": [{"type": "video", "title": "Видео", "duration": "12:53", "status": "todo"}, {"type": "guide", "title": "Гайд 1", "duration": "", "status": "todo"}, {"type": "guide", "title": "Гайд 2", "duration": "", "status": "todo"}, {"type": "guide", "title": "Гайд 3", "duration": "", "status": "todo"}]}, {"title": "Дополнительные гайды к фотосессиям", "items": [{"type": "guide", "title": "Гайд 1", "duration": "", "status": "todo"}, {"type": "guide", "title": "Гайд 2", "duration": "", "status": "todo"}, {"type": "guide", "title": "Гайд 3", "duration": "", "status": "todo"}]}, {"title": "Фотосессия с помощью NanaBanana или SeeDream", "items": [{"type": "guide", "title": "Гайд", "duration": "", "status": "todo"}]}]}, {"section": "🛍️ Нейрофотосессия товаров", "lessons": [{"title": "Введение", "items": [{"type": "video", "title": "Видео", "duration": "10:33", "status": "todo"}]}, {"title": "Связка ChatGPT + Midjourney", "items": [{"type": "video", "title": "Видео", "duration": "28:32", "status": "todo"}, {"type": "guide", "title": "Гайд", "duration": "", "status": "todo"}]}, {"title": "Связка ChatGPT + Midjourney + NanaBanana", "items": [{"type": "video", "title": "Видео", "duration": "22:28", "status": "todo"}, {"type": "guide", "title": "Гайд", "duration": "", "status": "todo"}]}, {"title": "Связка ChatGPT (платная подписка)", "items": [{"type": "video", "title": "Видео", "duration": "1:11:35", "status": "todo"}, {"type": "guide", "title": "Гайд", "duration": "", "status": "todo"}]}, {"title": "Доп. урок: фотосессия одежды и аксессуаров на практике", "items": [{"type": "video", "title": "Видео", "duration": "1:21:17", "status": "todo"}, {"type": "guide", "title": "Гайд", "duration": "", "status": "todo"}, {"type": "homework", "title": "Выбрать свою нишу или нишу на свой вкус", "duration": "", "status": "todo"}, {"type": "homework", "title": "Сделать фотосессии разных товаров из выбранной ниши", "duration": "", "status": "todo"}, {"type": "homework", "title": "Сделать видео для одного из предметов", "duration": "", "status": "todo"}, {"type": "homework", "title": "Подготовить разные ракурсы для видео", "duration": "", "status": "todo"}]}, {"title": "Продуктовые карточки для маркетплейсов", "items": [{"type": "video", "title": "Видео", "duration": "26:43", "status": "todo"}, {"type": "guide", "title": "Гайд 1", "duration": "", "status": "todo"}, {"type": "guide", "title": "Гайд 2", "duration": "", "status": "todo"}]}]}, {"section": "🎬 Создание видеороликов", "lessons": [{"title": "Введение", "items": [{"type": "video", "title": "Видео 1", "duration": "25:37", "status": "todo"}, {"type": "video", "title": "Видео 2", "duration": "19:06", "status": "todo"}]}, {"title": "Особенности создания привлекательного видео", "items": [{"type": "video", "title": "Видео 1", "duration": "8:57", "status": "todo"}, {"type": "video", "title": "Видео 2", "duration": "17:25", "status": "todo"}, {"type": "guide", "title": "Гайд", "duration": "", "status": "todo"}]}, {"title": "Генерация аудиодорожек", "items": [{"type": "video", "title": "Видео", "duration": "5:32", "status": "todo"}]}, {"title": "Подробный разбор создания видеоклипа", "items": [{"type": "video", "title": "Видео 1", "duration": "1:25", "status": "todo"}, {"type": "video", "title": "Видео 2", "duration": "45:53", "status": "todo"}]}, {"title": "Практическая работа по созданию видео", "items": [{"type": "video", "title": "Основное видео", "duration": "38:44", "status": "todo"}, {"type": "extra", "title": "Дополнительное видео 1", "duration": "33:52", "status": "todo"}, {"type": "extra", "title": "Дополнительное видео 2", "duration": "25:08", "status": "todo"}, {"type": "extra", "title": "Дополнительное видео 3", "duration": "40:25", "status": "todo"}]}, {"title": "Практическая работа по созданию видеоминиатюры", "items": [{"type": "video", "title": "Видео", "duration": "17:41", "status": "todo"}]}, {"title": "Продвижение и монетизация нейровидео", "items": [{"type": "video", "title": "Видео", "duration": "17:55", "status": "todo"}]}]}, {"section": "💰 Заработок на нейронках", "lessons": [{"title": "Введение", "items": [{"type": "video", "title": "Видео", "duration": "39:17", "status": "todo"}]}, {"title": "Как можно зарабатывать на нейросетях", "items": [{"type": "video", "title": "Видео", "duration": "3:10:33", "status": "todo"}, {"type": "guide", "title": "Гайд", "duration": "", "status": "todo"}, {"type": "homework", "title": "Подумать и выбрать интересную нишу", "duration": "", "status": "todo"}, {"type": "homework", "title": "Выбрать направление для первых шагов", "duration": "", "status": "todo"}]}, {"title": "Что именно продаём? Как создать оффер", "items": [{"type": "video", "title": "Видео", "duration": "1:19:34", "status": "todo"}, {"type": "guide", "title": "Гайд 1", "duration": "", "status": "todo"}, {"type": "guide", "title": "Гайд 2", "duration": "", "status": "todo"}, {"type": "homework", "title": "Создать свой оффер", "duration": "", "status": "todo"}, {"type": "homework", "title": "Выбрать нишу для проработки", "duration": "", "status": "todo"}, {"type": "homework", "title": "Разработать скрипты писем вместе с ChatGPT", "duration": "", "status": "todo"}]}, {"title": "Где искать клиентов", "items": [{"type": "video", "title": "Видео", "duration": "55:27", "status": "todo"}, {"type": "guide", "title": "Гайд 1", "duration": "", "status": "todo"}, {"type": "guide", "title": "Гайд 2", "duration": "", "status": "todo"}, {"type": "guide", "title": "Гайд 3", "duration": "", "status": "todo"}, {"type": "guide", "title": "Гайд 4", "duration": "", "status": "todo"}, {"type": "guide", "title": "Гайд 5", "duration": "", "status": "todo"}]}, {"title": "Ценообразование", "items": [{"type": "video", "title": "Видео", "duration": "21:48", "status": "todo"}, {"type": "guide", "title": "Гайд", "duration": "", "status": "todo"}]}, {"title": "Мои советы и лайфхаки", "items": [{"type": "video", "title": "Видео", "duration": "54:49", "status": "todo"}, {"type": "guide", "title": "Гайд", "duration": "", "status": "todo"}]}]}, {"section": "🎨 Midjourney от А до Я", "lessons": [{"title": "Введение", "items": [{"type": "video", "title": "Видео", "duration": "5:59", "status": "todo"}]}, {"title": "Навигация сайта", "items": [{"type": "video", "title": "Видео", "duration": "18:22", "status": "todo"}]}, {"title": "Настройки генерации", "items": [{"type": "video", "title": "Видео", "duration": "26:25", "status": "todo"}]}, {"title": "Генерация изображений", "items": [{"type": "video", "title": "Видео", "duration": "21:32", "status": "todo"}, {"type": "guide", "title": "Гайд 1", "duration": "", "status": "todo"}, {"type": "guide", "title": "Гайд 2", "duration": "", "status": "todo"}]}, {"title": "Редактирование генераций", "items": [{"type": "video", "title": "Видео", "duration": "12:48", "status": "todo"}]}, {"title": "Персонализация", "items": [{"type": "video", "title": "Видео", "duration": "11:26", "status": "todo"}]}, {"title": "Организация", "items": [{"type": "video", "title": "Видео", "duration": "6:45", "status": "todo"}]}, {"title": "Омни-референс", "items": [{"type": "video", "title": "Видео", "duration": "13:05", "status": "todo"}]}, {"title": "Чаты и совместная работа над проектами", "items": [{"type": "video", "title": "Видео", "duration": "4:29", "status": "todo"}]}, {"title": "Видеогенерации", "items": [{"type": "video", "title": "Видео", "duration": "7:22", "status": "todo"}]}, {"title": "Дополнительная информация по Midjourney", "items": [{"type": "video", "title": "Видео 1", "duration": "14:00", "status": "todo"}, {"type": "video", "title": "Видео 2", "duration": "13:57", "status": "todo"}]}]}, {"section": "📚 Библиотека", "lessons": [{"title": "Библиотека", "items": [{"type": "guide", "title": "18 гайдов", "duration": "", "status": "todo"}]}]}];
+const KEY="neurocourse_v33_course", EXTRA="neurocourse_v33_extra", SYNC="neurocourse_v33_sync";let currentSection=0;let syncTimer=null;
+let course=JSON.parse(localStorage.getItem(KEY)||JSON.stringify(DEFAULT_COURSE));
+if(!Array.isArray(course)||course.length===0){course=JSON.parse(JSON.stringify(DEFAULT_COURSE));localStorage.setItem(KEY,JSON.stringify(course));}
+let extra=JSON.parse(localStorage.getItem(EXTRA)||'{"practice":[],"prompts":[],"works":[],"ideas":[],"practiceDays":{}}');
+function ensureExtra(){extra.practice=extra.practice||[];extra.prompts=extra.prompts||[];extra.works=extra.works||[];extra.ideas=extra.ideas||[];extra.practiceDays=extra.practiceDays||{};extra.videoDays=extra.videoDays||{};extra.settings=extra.settings||{};if(!extra.settings.deadline)extra.settings.deadline="2026-07-01";}
+ensureExtra();
 
-const GH_KEYS = {owner:'gh_owner',repo:'gh_repo',branch:'gh_branch',path:'gh_path',token:'gh_token',auto:'gh_autoSync',last:'gh_lastSync'};
-let autoSyncTimer = null;
-function statusMsg(text,kind='info'){const el=document.getElementById('syncStatus');if(!el)return;el.textContent=text;el.style.borderColor=kind==='bad'?'rgba(251,113,133,.45)':kind==='ok'?'rgba(52,211,153,.45)':'rgba(255,255,255,.12)';el.style.color=kind==='bad'?'#fecdd3':kind==='ok'?'#bbf7d0':'#dbeafe'}
-function getGhConfig(){return {owner:localStorage.getItem(GH_KEYS.owner)||'',repo:localStorage.getItem(GH_KEYS.repo)||'',branch:localStorage.getItem(GH_KEYS.branch)||'main',path:localStorage.getItem(GH_KEYS.path)||'tracker-data.json',token:localStorage.getItem(GH_KEYS.token)||''}}
-function fillGithubSettings(){const c=getGhConfig();document.getElementById('ghOwner').value=c.owner;document.getElementById('ghRepo').value=c.repo;document.getElementById('ghBranch').value=c.branch;document.getElementById('ghPath').value=c.path;document.getElementById('ghToken').value=c.token;updateAutoButton();const last=localStorage.getItem(GH_KEYS.last);if(c.owner&&c.repo&&c.token)statusMsg('GitHub Sync настроен. Последняя синхронизация: '+(last?new Date(last).toLocaleString('ru-RU'):'ещё не было')+'.','ok')}
-function saveGithubSettings(){localStorage.setItem(GH_KEYS.owner,document.getElementById('ghOwner').value.trim());localStorage.setItem(GH_KEYS.repo,document.getElementById('ghRepo').value.trim());localStorage.setItem(GH_KEYS.branch,document.getElementById('ghBranch').value.trim()||'main');localStorage.setItem(GH_KEYS.path,document.getElementById('ghPath').value.trim()||'tracker-data.json');localStorage.setItem(GH_KEYS.token,document.getElementById('ghToken').value.trim());fillGithubSettings();statusMsg('Настройки GitHub сохранены в этом браузере. Теперь можно сохранить данные в GitHub.','ok')}
-function clearGithubSettings(){if(confirm('Очистить GitHub-настройки и токен в этом браузере?')){Object.values(GH_KEYS).forEach(k=>localStorage.removeItem(k));fillGithubSettings();statusMsg('GitHub-настройки очищены на этом устройстве.','info')}}
-function toggleTokenVisibility(){const el=document.getElementById('ghToken');el.type=el.type==='password'?'text':'password'}
-function updateAutoButton(){const on=localStorage.getItem(GH_KEYS.auto)==='1';const b=document.getElementById('autoSyncBtn');if(b)b.textContent='Автосинхронизация: '+(on?'вкл':'выкл')}
-function toggleAutoSync(){const on=localStorage.getItem(GH_KEYS.auto)==='1';localStorage.setItem(GH_KEYS.auto,on?'0':'1');updateAutoButton();statusMsg(on?'Автосинхронизация выключена.':'Автосинхронизация включена: после изменений приложение будет пытаться сохранить данные в GitHub.','info')}
-function requireGh(){const c=getGhConfig();if(!c.owner||!c.repo||!c.branch||!c.path||!c.token){throw new Error('Заполни GitHub owner, repo, branch, path и token, потом нажми «Сохранить настройки».')}return c}
-function ghApiUrl(c){return `https://api.github.com/repos/${encodeURIComponent(c.owner)}/${encodeURIComponent(c.repo)}/contents/${c.path.split('/').map(encodeURIComponent).join('/')}?ref=${encodeURIComponent(c.branch)}`}
-function toBase64Unicode(str){return btoa(unescape(encodeURIComponent(str)))}
-function fromBase64Unicode(str){return decodeURIComponent(escape(atob(str.replace(/\n/g,''))))}
-async function githubGetFile(c){const res=await fetch(ghApiUrl(c),{headers:{'Authorization':'Bearer '+c.token,'Accept':'application/vnd.github+json'}});if(res.status===404)return null;if(!res.ok){throw new Error('GitHub GET: '+res.status+' '+await res.text())}return await res.json()}
-async function githubStatusCheck(){try{saveGithubSettings();const c=requireGh();statusMsg('Проверяю связь с GitHub...','info');const file=await githubGetFile(c);statusMsg(file?'Связь есть. Файл данных найден: '+c.path:'Связь есть. Файла данных пока нет, он создастся при сохранении.','ok')}catch(e){statusMsg(e.message,'bad')}}
-async function githubSave(){try{saveGithubSettings();const c=requireGh();statusMsg('Сохраняю прогресс в GitHub...','info');const current=await githubGetFile(c);const data=collectData();const body={message:'Update neurocourse tracker data v3.4',content:toBase64Unicode(JSON.stringify(data,null,2)),branch:c.branch};if(current&&current.sha)body.sha=current.sha;const res=await fetch(ghApiUrl(c).replace(/\?ref=.*/,''),{method:'PUT',headers:{'Authorization':'Bearer '+c.token,'Accept':'application/vnd.github+json','Content-Type':'application/json'},body:JSON.stringify(body)});if(!res.ok){throw new Error('GitHub SAVE: '+res.status+' '+await res.text())}localStorage.setItem(GH_KEYS.last,new Date().toISOString());statusMsg('Готово: прогресс сохранён в GitHub. Теперь на другом устройстве нажми «Загрузить из GitHub».','ok')}catch(e){statusMsg(e.message,'bad')}}
-async function githubLoad(){try{saveGithubSettings();const c=requireGh();statusMsg('Загружаю прогресс из GitHub...','info');const file=await githubGetFile(c);if(!file||!file.content)throw new Error('Файл данных ещё не найден. Сначала сохрани прогресс в GitHub на основном устройстве.');const data=JSON.parse(fromBase64Unicode(file.content));importDataObject(data);localStorage.setItem(GH_KEYS.last,new Date().toISOString());statusMsg('Готово: прогресс загружен из GitHub на это устройство.','ok')}catch(e){statusMsg(e.message,'bad')}}
-function scheduleAutoSync(){if(localStorage.getItem(GH_KEYS.auto)!=='1')return;clearTimeout(autoSyncTimer);autoSyncTimer=setTimeout(()=>githubSave(),1200)}
+function parseTime(t){if(!t)return 0;let p=String(t).trim().split(":").map(Number);if(p.some(Number.isNaN))return 0;if(p.length===2)return p[0]*60+p[1];if(p.length===3)return p[0]*3600+p[1]*60+p[2];return 0}
+function fmt(sec){sec=Math.max(0,Math.round(sec||0));let h=Math.floor(sec/3600);sec%=3600;let m=Math.floor(sec/60),s=sec%60;if(h)return `${h} ч ${String(m).padStart(2,"0")} мин`;if(m)return `${m} мин ${String(s).padStart(2,"0")} сек`;return `${s} сек`}
+function icon(t){return{video:"🎥",guide:"📖",homework:"📝",star:"⭐",extra:"🎁"}[t]||"•"}function label(s){return s==="done"?"✅ Сделано":s==="progress"?"🔵 В процессе":"⬜ Не начато"}
+function itemProg(i){if(i.status==="done")return 1;if((i.type==="video"||i.type==="extra")&&i.status==="progress"){let d=parseTime(i.duration),w=parseTime(i.watched||"0:00");return d?Math.min(1,w/d):.5}return i.status==="progress"?.5:0}
+function save(){localStorage.setItem(KEY,JSON.stringify(course));renderAll();scheduleCloudPush()}
+function saveExtra(){localStorage.setItem(EXTRA,JSON.stringify(extra));renderAll();scheduleCloudPush()}
+function stats(){let tv=0,wv=0,total=0,done=0,weighted=0,types={video:[0,0],guide:[0,0],homework:[0,0],star:[0,0],extra:[0,0]};course.forEach(s=>s.lessons.forEach(l=>l.items.forEach(i=>{total++;weighted+=itemProg(i);if(i.status==="done")done++;if(types[i.type]){types[i.type][1]++;if(i.status==="done")types[i.type][0]++}if(i.type==="video"||i.type==="extra"){let d=parseTime(i.duration);tv+=d;wv+=i.status==="done"?d:(i.status==="progress"?Math.min(d,parseTime(i.watched||"0:00")):0)}})));return{tv,wv,total,done,weighted,types}}
+function sectionStats(s){let total=0,w=0,done=0;s.lessons.forEach(l=>l.items.forEach(i=>{total++;w+=itemProg(i);if(i.status==="done")done++}));return{pct:total?w/total*100:0,done,total}}
+function isVideoItem(i){return i.type==="video"||i.type==="extra"}
+function todayISO(){return new Date().toISOString().slice(0,10)}
+function markToday(){ensureExtra();extra.practiceDays[todayISO()]=true;localStorage.setItem(EXTRA,JSON.stringify(extra))}
+function toInputTime(sec){sec=Math.max(0,Math.round(sec||0));let h=Math.floor(sec/3600);sec%=3600;let m=Math.floor(sec/60),s=sec%60;return h?`${h}:${String(m).padStart(2,"0")}:${String(s).padStart(2,"0")}`:`${m}:${String(s).padStart(2,"0")}`}
+function addVideoDay(sec){ensureExtra();if(sec<=0)return;const d=todayISO();extra.videoDays[d]=(extra.videoDays[d]||0)+sec;extra.practiceDays[d]=true;localStorage.setItem(EXTRA,JSON.stringify(extra))}
+function todayVideoSeconds(){ensureExtra();return extra.videoDays[todayISO()]||0}
+function getDeadline(){ensureExtra();return extra.settings.deadline||"2026-07-01"}
+function setDeadline(v){ensureExtra();extra.settings.deadline=v||"2026-07-01";saveExtra()}
+function lastVideoDays(n=7){ensureExtra();let out=[];for(let k=0;k<n;k++){let d=new Date();d.setDate(d.getDate()-k);let iso=d.toISOString().slice(0,10);out.push({iso,sec:extra.videoDays[iso]||0})}return out}
+function avgLastDays(n=7){let arr=lastVideoDays(n);return arr.reduce((a,b)=>a+b.sec,0)/n}
+function forecastFinishDate(leftSec){let avg=avgLastDays(7);if(!avg)return "—";let days=Math.ceil(leftSec/avg);let d=new Date();d.setDate(d.getDate()+days);return d.toLocaleDateString("ru-RU",{day:"2-digit",month:"2-digit"})}
+function findActiveVideo(){let firstTodo=null, firstProgress=null;course.forEach((s,si)=>s.lessons.forEach((l,li)=>l.items.forEach((i,ii)=>{if(!isVideoItem(i)||i.status==="done")return;let obj={s,l,i,si,li,ii};if(i.status==="progress"&&!firstProgress)firstProgress=obj;if(!firstTodo)firstTodo=obj;})));return firstProgress||firstTodo}
+function applyVideoDelta(si,li,ii,deltaSec){let i=course[si].lessons[li].items[ii];if(!isVideoItem(i)||deltaSec<=0)return;let d=parseTime(i.duration),oldSec=Math.min(d,parseTime(i.watched||"0:00")),nextSec=Math.min(d,oldSec+deltaSec);i.watched=toInputTime(nextSec);i.status=nextSec>=d?"done":(nextSec>0?"progress":"todo");addVideoDay(Math.max(0,nextSec-oldSec));localStorage.setItem(KEY,JSON.stringify(course));localStorage.setItem(EXTRA,JSON.stringify(extra));renderAll();scheduleCloudPush()}
+function addViewingToActive(minutes){minutes=Number(minutes)||0;if(minutes<=0)return;let a=findActiveVideo();if(!a){alert("Все видео уже закрыты 🎉");return;}applyVideoDelta(a.si,a.li,a.ii,minutes*60)}
+function setStatus(si,li,ii,st){let i=course[si].lessons[li].items[ii];let oldSec=isVideoItem(i)?Math.min(parseTime(i.duration),parseTime(i.watched||"0:00")):0;i.status=st;if(st==="done"&&isVideoItem(i)){i.watched=i.duration;addVideoDay(Math.max(0,parseTime(i.duration)-oldSec))}if(st==="todo")i.watched="";markToday();save()}
+function updateWatched(si,li,ii,v){let i=course[si].lessons[li].items[ii];let oldSec=isVideoItem(i)?Math.min(parseTime(i.duration),parseTime(i.watched||"0:00")):0;i.watched=v;i.status=parseTime(v)>=parseTime(i.duration)?"done":(parseTime(v)>0?"progress":"todo");let newSec=isVideoItem(i)?Math.min(parseTime(i.duration),parseTime(v||"0:00")):0;addVideoDay(Math.max(0,newSec-oldSec));markToday();save()}
+function nextItems(n=4){let a=[];course.forEach((s,si)=>s.lessons.forEach((l,li)=>l.items.forEach((i,ii)=>{if(i.status!=="done"&&a.length<n)a.push({s,l,i,si,li,ii})})));return a}
+function renderDashboard(){ensureExtra();let st=stats(),pct=st.total?st.weighted/st.total*100:0;overallPct.textContent=pct.toFixed(1)+"%";overallFill.style.width=pct+"%";watchedTime.textContent=fmt(st.wv);leftTime.textContent=fmt(st.tv-st.wv);taskCount.textContent=`${st.done}/${st.total}`;
+let deadline=getDeadline();if(window.deadlineInput)deadlineInput.value=deadline;let deadlineDate=new Date(deadline+"T23:59:59"),now=new Date(),days=Math.max(1,Math.ceil((deadlineDate-now)/86400000)),left=Math.max(0,st.tv-st.wv),need=left/days,todaySec=todayVideoSeconds(),todayLeft=Math.max(0,need-todaySec);
+dailyGoalTime.textContent=fmt(need);todayVideoTime.textContent=fmt(todaySec);todayLeftTime.textContent=todayLeft?fmt(todayLeft):"норма закрыта ✅";todayVideoFill.style.width=(need?Math.min(100,todaySec/need*100):100)+"%";forecastDate.textContent=forecastFinishDate(left);
+dailyNeed.textContent=`${fmt(need)} в день`;let avg7=avgLastDays(7);planText.textContent=`До дедлайна ${days} дн. Среднее за 7 дней: ${fmt(avg7)} в день. Расчёт только по видео.`;typeStats.innerHTML=`<span class="pill">🎥 Видео: ${st.types.video[0]}/${st.types.video[1]}</span><span class="pill">📖 Гайды: ${st.types.guide[0]}/${st.types.guide[1]}</span><span class="pill">📝 ДЗ: ${st.types.homework[0]+st.types.star[0]}/${st.types.homework[1]+st.types.star[1]}</span>`;
+let active=findActiveVideo();activeVideoText.innerHTML=active?`Сейчас прибавление идёт в: <b>${active.l.title}</b> · ${active.i.title} · ${active.i.watched||"0:00"}/${active.i.duration}`:"Все видео закрыты 🎉";todayHistory.innerHTML="Последние дни: "+lastVideoDays(5).map(d=>`<span class="pill">${d.iso.slice(5)} · ${fmt(d.sec)}</span>`).join("");
+let items=nextItems(4);todayTitle.textContent=items[0]?`${items[0].s.section} → ${items[0].l.title}`:"Всё закрыто 🎉";todayList.innerHTML=items.map(x=>`<div class="pill">${icon(x.i.type)} ${x.l.title}: ${x.i.title}${x.i.duration?` (${x.i.duration})`:""}</div>`).join("");focusFill.style.width=items[0]?itemProg(items[0].i)*100+"%":"100%";sectionTable.innerHTML=course.map(s=>{let ss=sectionStats(s);return`<tr><td>${s.section}</td><td>${ss.done===ss.total?"✅":ss.done>0?"🔵":"⬜"} ${ss.done}/${ss.total}</td><td><div style="display:flex;gap:8px;align-items:center"><div class="miniBar" style="flex:1"><div class="miniFill" style="width:${ss.pct}%"></div></div>${ss.pct.toFixed(1)}%</div></td></tr>`}).join("")}
+function renderCourse(){tabs.innerHTML="";course.forEach((s,idx)=>{let b=document.createElement("button");b.className="tab"+(idx===currentSection?" active":"");b.textContent=s.section;b.onclick=()=>{currentSection=idx;renderCourse()};tabs.appendChild(b)});let q=(search.value||"").toLowerCase().trim(),s=course[currentSection],ss=sectionStats(s);let html=`<div class="card"><h2>${s.section}</h2><div class="pill">📈 ${ss.pct.toFixed(1)}%</div>`;s.lessons.forEach((l,li)=>{let text=(l.title+" "+l.items.map(i=>i.title).join(" ")).toLowerCase();if(q&&!text.includes(q))return;html+=`<div class="lesson"><h3>${l.title}</h3>`;l.items.forEach((i,ii)=>{let isV=i.type==="video"||i.type==="extra";html+=`<div class="item"><div class="type">${icon(i.type)}</div><div><div class="title">${i.title}</div>${i.status==="progress"&&isV?`<div class="small">Просмотрено: ${i.watched||"0:00"}</div>`:""}</div><div class="duration">${i.duration||"—"}</div><div class="status">${label(i.status)}</div><div class="controls">${isV?`<input class="timeInput" value="${i.watched||""}" placeholder="мм:сс" onchange="updateWatched(${currentSection},${li},${ii},this.value)">`:""}<button class="mini" onclick="setStatus(${currentSection},${li},${ii},'todo')">⬜</button><button class="mini warn" onclick="setStatus(${currentSection},${li},${ii},'progress')">🔵</button><button class="mini good" onclick="setStatus(${currentSection},${li},${ii},'done')">✅</button></div></div>`});html+=`</div>`});sectionBox.innerHTML=html+"</div>"}
+function showPage(id,btn){document.querySelectorAll("section").forEach(s=>s.classList.add("hidden"));document.getElementById(id).classList.remove("hidden");document.querySelectorAll(".nav button").forEach(b=>b.classList.remove("active"));btn.classList.add("active");renderAll()}
+function addPractice(){extra.practice.push({date:prDate.value||todayISO(),minutes:+prMinutes.value||0,topic:prTopic.value,type:prType.value,note:prNote.value});markToday();prMinutes.value=prTopic.value=prNote.value="";saveExtra()}
+function renderPractice(){practiceList.innerHTML=(extra.practice||[]).slice().reverse().map((p,idx)=>`<div class="listCard"><div class="row"><b>${p.date} · ${p.type} · ${p.minutes} мин</b></div><div>${p.topic||""}</div><div class="small">${p.note||""}</div></div>`).join("")}
+function renderCalendar(){let d=new Date(),year=d.getFullYear(),month=d.getMonth(),last=new Date(year,month+1,0),html="";for(let i=1;i<=last.getDate();i++){let iso=new Date(year,month,i+1).toISOString().slice(0,10),cls=(extra.practiceDays&&extra.practiceDays[iso])?"day doneDay":"day";if(iso===todayISO())cls+=" today";html+=`<div class="${cls}"><b>${i}</b><br>${extra.practiceDays&&extra.practiceDays[iso]?"✅ занятие":""}</div>`}calendarBox.innerHTML=html}
+function addPrompt(){extra.prompts.push({title:promptTitle.value,tool:promptTool.value,text:promptText.value,date:todayISO()});promptTitle.value=promptTool.value=promptText.value="";saveExtra()}
+function renderPrompts(){promptList.innerHTML=(extra.prompts||[]).slice().reverse().map(p=>`<div class="listCard"><b>${p.tool}: ${p.title}</b><pre style="white-space:pre-wrap">${p.text||""}</pre></div>`).join("")}
+function addWork(){extra.works.push({title:workTitle.value,link:workLink.value,note:workNote.value,date:todayISO()});workTitle.value=workLink.value=workNote.value="";saveExtra()}
+function renderWorks(){workList.innerHTML=(extra.works||[]).slice().reverse().map(w=>`<div class="listCard"><b>${w.title}</b>${w.link?`<div><a href="${w.link}" target="_blank" style="color:#93c5fd">Открыть</a></div>`:""}<div>${w.note||""}</div></div>`).join("")}
+function addIdea(){extra.ideas.push({title:ideaTitle.value,note:ideaNote.value,date:todayISO()});ideaTitle.value=ideaNote.value="";saveExtra()}
+function renderIdeas(){ideaList.innerHTML=(extra.ideas||[]).slice().reverse().map(i=>`<div class="listCard"><b>${i.title}</b><div>${i.note||""}</div></div>`).join("")}
 
-if(!localStorage.getItem('totalWatchedSec'))localStorage.setItem('totalWatchedSec',String(DEFAULT_TOTAL_WATCHED));
-if(!localStorage.getItem('deadline'))localStorage.setItem('deadline','2026-07-01');
-render();
-fillGithubSettings();
+function getSyncSettings(){
+  return JSON.parse(localStorage.getItem(SYNC)||'{}');
+}
+function openSyncSettings(){
+  const s=getSyncSettings();
+  syncOwner.value=s.owner||"";
+  syncRepo.value=s.repo||"neurocourse-tracker";
+  syncBranch.value=s.branch||"main";
+  syncToken.value=s.token||"";
+  syncModal.classList.remove("hidden");
+  syncStatus.textContent="Заполни поля и нажми «Сохранить настройки».";
+}
+function closeSyncSettings(){
+  syncModal.classList.add("hidden");
+}
+function saveSyncSettings(){
+  const s={
+    owner:syncOwner.value.trim(),
+    repo:syncRepo.value.trim()||"neurocourse-tracker",
+    branch:syncBranch.value.trim()||"main",
+    token:syncToken.value.trim()
+  };
+  localStorage.setItem(SYNC,JSON.stringify(s));
+  syncStatus.textContent="✅ Настройки синхронизации сохранены.";
+}
+function syncConfigured(){
+  const s=getSyncSettings();
+  return !!(s.owner&&s.repo&&s.branch&&s.token);
+}
+function cloudPayload(){
+  return {
+    version:"3.4",
+    updatedAt:new Date().toISOString(),
+    course,
+    extra
+  };
+}
+function encodeUnicode(str){
+  return btoa(unescape(encodeURIComponent(str)));
+}
+function decodeUnicode(str){
+  return decodeURIComponent(escape(atob(str)));
+}
+async function githubGetFile(){
+  const s=getSyncSettings();
+  const url=`https://api.github.com/repos/${s.owner}/${s.repo}/contents/progress.json?ref=${s.branch}`;
+  const res=await fetch(url,{headers:{Authorization:`Bearer ${s.token}`,Accept:"application/vnd.github+json"}});
+  if(res.status===404) return null;
+  if(!res.ok) throw new Error("GitHub GET: "+res.status+" "+await res.text());
+  return await res.json();
+}
+async function cloudPull(){
+  try{
+    if(!syncConfigured()){openSyncSettings(); syncStatus.textContent="Сначала заполни настройки синхронизации."; return;}
+    syncStatus.textContent="Загружаю прогресс из облака...";
+    const file=await githubGetFile();
+    if(!file){syncStatus.textContent="В облаке ещё нет progress.json. Сначала нажми «В облако» на устройстве, где актуальный прогресс."; return;}
+    const data=JSON.parse(decodeUnicode(file.content.replace(/\n/g,"")));
+    if(data.course) course=data.course;
+    if(data.extra) extra=data.extra;
+    localStorage.setItem(KEY,JSON.stringify(course));
+    localStorage.setItem(EXTRA,JSON.stringify(extra));
+    syncStatus.textContent="✅ Прогресс загружен из облака.";
+    renderAll();
+  }catch(e){
+    syncStatus.textContent="❌ Ошибка загрузки: "+e.message;
+    console.error(e);
+  }
+}
+async function cloudPush(showStatus=true){
+  try{
+    if(!syncConfigured()){ if(showStatus){openSyncSettings(); syncStatus.textContent="Сначала заполни настройки синхронизации.";} return; }
+    if(showStatus) syncStatus.textContent="Сохраняю прогресс в облако...";
+    const s=getSyncSettings();
+    const current=await githubGetFile();
+    const body={
+      message:"Update neurocourse progress",
+      content:encodeUnicode(JSON.stringify(cloudPayload(),null,2)),
+      branch:s.branch
+    };
+    if(current&&current.sha) body.sha=current.sha;
+    const url=`https://api.github.com/repos/${s.owner}/${s.repo}/contents/progress.json`;
+    const res=await fetch(url,{
+      method:"PUT",
+      headers:{Authorization:`Bearer ${s.token}`,Accept:"application/vnd.github+json","Content-Type":"application/json"},
+      body:JSON.stringify(body)
+    });
+    if(!res.ok) throw new Error("GitHub PUT: "+res.status+" "+await res.text());
+    if(showStatus) syncStatus.textContent="✅ Прогресс сохранён в облако.";
+  }catch(e){
+    if(showStatus) syncStatus.textContent="❌ Ошибка сохранения: "+e.message;
+    console.error(e);
+  }
+}
+function scheduleCloudPush(){
+  if(!syncConfigured()) return;
+  clearTimeout(syncTimer);
+  syncTimer=setTimeout(()=>cloudPush(false),1200);
+}
+
+function exportAll(){let blob=new Blob([JSON.stringify({course,extra},null,2)],{type:"application/json"});let a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="neurocourse-full-backup.json";a.click()}
+importFile.addEventListener("change",e=>{let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{let data=JSON.parse(r.result);course=data.course||data;extra=data.extra||extra;localStorage.setItem(KEY,JSON.stringify(course));localStorage.setItem(EXTRA,JSON.stringify(extra));renderAll()};r.readAsText(f)})
+function hardReset(){if(confirm("Загрузить встроенный курс заново?")){localStorage.removeItem(KEY);course=JSON.parse(JSON.stringify(DEFAULT_COURSE));localStorage.setItem(KEY,JSON.stringify(course));renderAll()}}
+function renderAll(){renderDashboard();renderCourse();renderPractice();renderCalendar();renderPrompts();renderWorks();renderIdeas()}
+search.addEventListener("input",renderCourse);prDate.value=todayISO();renderAll();
+
+if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(console.warn));}
 </script>
-</body>
-</html>
+</body></html>
