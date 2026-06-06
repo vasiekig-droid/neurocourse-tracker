@@ -1,6 +1,6 @@
 {
   "version": "3.9",
-  "updatedAt": "2026-06-06T14:16:32.288Z",
+  "updatedAt": "2026-06-06T14:18:24.421Z",
   "course": [
     {
       "section": "🧭 Введение",
@@ -1085,42 +1085,6 @@
         "seriesId": "series_1780755189130_db6ce1b7c54d9"
       },
       {
-        "date": "2026-06-08",
-        "title": "🇬🇧 Английский",
-        "category": "🇬🇧 Английский",
-        "start": "18:00",
-        "end": "19:00",
-        "source": "recurring",
-        "seriesId": "series_1780755278396_a5958b321bcfa8"
-      },
-      {
-        "date": "2026-06-15",
-        "title": "🇬🇧 Английский",
-        "category": "🇬🇧 Английский",
-        "start": "18:00",
-        "end": "19:00",
-        "source": "recurring",
-        "seriesId": "series_1780755278396_a5958b321bcfa8"
-      },
-      {
-        "date": "2026-06-22",
-        "title": "🇬🇧 Английский",
-        "category": "🇬🇧 Английский",
-        "start": "18:00",
-        "end": "19:00",
-        "source": "recurring",
-        "seriesId": "series_1780755278396_a5958b321bcfa8"
-      },
-      {
-        "date": "2026-06-29",
-        "title": "🇬🇧 Английский",
-        "category": "🇬🇧 Английский",
-        "start": "18:00",
-        "end": "19:00",
-        "source": "recurring",
-        "seriesId": "series_1780755278396_a5958b321bcfa8"
-      },
-      {
         "date": "2026-06-11",
         "title": "🇬🇧 Английский",
         "category": "🇬🇧 Английский",
@@ -1146,6 +1110,166 @@
         "end": "17:30",
         "source": "recurring",
         "seriesId": "series_1780755313637_b19508a8c87ad"
+      },
+      {
+        "date": "2026-06-08",
+        "title": "🇬🇧 Английский",
+        "category": "🇬🇧 Английский",
+        "start": "18:00",
+        "end": "19:00",
+        "source": "recurring",
+        "seriesId": "series_1780755415839_410d3077578688"
+      },
+      {
+        "date": "2026-06-15",
+        "title": "🇬🇧 Английский",
+        "category": "🇬🇧 Английский",
+        "start": "18:00",
+        "end": "19:00",
+        "source": "recurring",
+        "seriesId": "series_1780755415839_410d3077578688"
+      },
+      {
+        "date": "2026-06-22",
+        "title": "🇬🇧 Английский",
+        "category": "🇬🇧 Английский",
+        "start": "18:00",
+        "end": "19:00",
+        "source": "recurring",
+        "seriesId": "series_1780755415839_410d3077578688"
+      },
+      {
+        "date": "2026-06-29",
+        "title": "🇬🇧 Английский",
+        "category": "🇬🇧 Английский",
+        "start": "18:00",
+        "end": "19:00",
+        "source": "recurring",
+        "seriesId": "series_1780755415839_410d3077578688"
+      },
+      {
+        "date": "2026-07-06",
+        "title": "🇬🇧 Английский",
+        "category": "🇬🇧 Английский",
+        "start": "18:00",
+        "end": "19:00",
+        "source": "recurring",
+        "seriesId": "series_1780755415839_410d3077578688"
+      },
+      {
+        "date": "2026-07-13",
+        "title": "🇬🇧 Английский",
+        "category": "🇬🇧 Английский",
+        "start": "18:00",
+        "end": "19:00",
+        "source": "recurring",
+        "seriesId": "series_1780755415839_410d3077578688"
+      },
+      {
+        "date": "2026-07-20",
+        "title": "🇬🇧 Английский",
+        "category": "🇬🇧 Английский",
+        "start": "18:00",
+        "end": "19:00",
+        "source": "recurring",
+        "seriesId": "series_1780755415839_410d3077578688"
+      },
+      {
+        "date": "2026-07-27",
+        "title": "🇬🇧 Английский",
+        "category": "🇬🇧 Английский",
+        "start": "18:00",
+        "end": "19:00",
+        "source": "recurring",
+        "seriesId": "series_1780755415839_410d3077578688"
+      },
+      {
+        "date": "2026-08-03",
+        "title": "🇬🇧 Английский",
+        "category": "🇬🇧 Английский",
+        "start": "18:00",
+        "end": "19:00",
+        "source": "recurring",
+        "seriesId": "series_1780755415839_410d3077578688"
+      },
+      {
+        "date": "2026-08-10",
+        "title": "🇬🇧 Английский",
+        "category": "🇬🇧 Английский",
+        "start": "18:00",
+        "end": "19:00",
+        "source": "recurring",
+        "seriesId": "series_1780755415839_410d3077578688"
+      },
+      {
+        "date": "2026-08-17",
+        "title": "🇬🇧 Английский",
+        "category": "🇬🇧 Английский",
+        "start": "18:00",
+        "end": "19:00",
+        "source": "recurring",
+        "seriesId": "series_1780755415839_410d3077578688"
+      },
+      {
+        "date": "2026-08-24",
+        "title": "🇬🇧 Английский",
+        "category": "🇬🇧 Английский",
+        "start": "18:00",
+        "end": "19:00",
+        "source": "recurring",
+        "seriesId": "series_1780755415839_410d3077578688"
+      },
+      {
+        "date": "2026-08-31",
+        "title": "🇬🇧 Английский",
+        "category": "🇬🇧 Английский",
+        "start": "18:00",
+        "end": "19:00",
+        "source": "recurring",
+        "seriesId": "series_1780755415839_410d3077578688"
+      },
+      {
+        "date": "2026-09-07",
+        "title": "🇬🇧 Английский",
+        "category": "🇬🇧 Английский",
+        "start": "18:00",
+        "end": "19:00",
+        "source": "recurring",
+        "seriesId": "series_1780755415839_410d3077578688"
+      },
+      {
+        "date": "2026-09-14",
+        "title": "🇬🇧 Английский",
+        "category": "🇬🇧 Английский",
+        "start": "18:00",
+        "end": "19:00",
+        "source": "recurring",
+        "seriesId": "series_1780755415839_410d3077578688"
+      },
+      {
+        "date": "2026-09-21",
+        "title": "🇬🇧 Английский",
+        "category": "🇬🇧 Английский",
+        "start": "18:00",
+        "end": "19:00",
+        "source": "recurring",
+        "seriesId": "series_1780755415839_410d3077578688"
+      },
+      {
+        "date": "2026-09-28",
+        "title": "🇬🇧 Английский",
+        "category": "🇬🇧 Английский",
+        "start": "18:00",
+        "end": "19:00",
+        "source": "recurring",
+        "seriesId": "series_1780755415839_410d3077578688"
+      },
+      {
+        "date": "2026-06-12",
+        "title": "Ортодонт",
+        "start": "15:00",
+        "end": "15:30",
+        "source": "manual"
       }
     ],
     "viewingLog": [],
