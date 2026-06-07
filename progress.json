@@ -1,6 +1,6 @@
 {
   "version": "4.2",
-  "updatedAt": "2026-06-06T15:13:45.206Z",
+  "updatedAt": "2026-06-07T08:52:16.645Z",
   "course": [
     {
       "section": "🧭 Введение",
@@ -1012,18 +1012,20 @@
     },
     "settings": {
       "deadline": "2026-06-30",
-      "planStart": "09:00",
+      "planStart": "12:00",
       "planEnd": "21:00",
       "maxVideoPerDay": 120,
       "softStopPercent": 125,
       "breakEveryMinutes": 45,
       "eveningMode": "normal",
-      "generatedStudyDate": "2026-06-06",
-      "generatedStudyStart": "09:00",
-      "generatedStudyEnd": "10:04",
+      "generatedStudyDate": "2026-06-07",
+      "generatedStudyStart": "12:00",
+      "generatedStudyEnd": "13:04",
       "generatedStudyMinutes": 64
     },
-    "restDays": {},
+    "restDays": {
+      "2026-06-07": true
+    },
     "busy": [
       {
         "date": "2026-06-08",
