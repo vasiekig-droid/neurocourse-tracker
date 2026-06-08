@@ -1,6 +1,6 @@
 {
   "version": "4.2",
-  "updatedAt": "2026-06-08T18:09:09.048Z",
+  "updatedAt": "2026-06-08T18:40:36.602Z",
   "course": [
     {
       "section": "🧭 Введение",
@@ -156,7 +156,8 @@
               "type": "video",
               "title": "Видео 3",
               "duration": "34:38",
-              "status": "todo"
+              "status": "progress",
+              "watched": "16:20"
             },
             {
               "type": "guide",
@@ -1010,7 +1011,7 @@
     },
     "videoDays": {
       "2026-06-06": 5518,
-      "2026-06-08": 1719
+      "2026-06-08": 2699
     },
     "settings": {
       "deadline": "2026-06-30",
@@ -1449,6 +1450,15 @@
         "li": 2,
         "ii": 1,
         "createdAt": "2026-06-08T18:09:07.339Z"
+      },
+      {
+        "date": "2026-06-08",
+        "sec": 980,
+        "title": "Syntx · Видео 3",
+        "si": 2,
+        "li": 2,
+        "ii": 2,
+        "createdAt": "2026-06-08T18:40:34.633Z"
       }
     ],
     "restSeries": {},
