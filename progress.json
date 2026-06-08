@@ -1,6 +1,6 @@
 {
   "version": "4.2",
-  "updatedAt": "2026-06-08T18:53:35.317Z",
+  "updatedAt": "2026-06-08T19:55:28.043Z",
   "course": [
     {
       "section": "🧭 Введение",
@@ -174,7 +174,8 @@
               "type": "video",
               "title": "Видео",
               "duration": "55:50",
-              "status": "todo"
+              "status": "progress",
+              "watched": "3:10"
             },
             {
               "type": "guide",
@@ -1011,7 +1012,7 @@
     },
     "videoDays": {
       "2026-06-06": 5518,
-      "2026-06-08": 3797
+      "2026-06-08": 3987
     },
     "settings": {
       "deadline": "2026-06-30",
@@ -1468,6 +1469,15 @@
         "li": 2,
         "ii": 2,
         "createdAt": "2026-06-08T18:53:33.648Z"
+      },
+      {
+        "date": "2026-06-08",
+        "sec": 190,
+        "title": "Runway · Видео",
+        "si": 2,
+        "li": 3,
+        "ii": 0,
+        "createdAt": "2026-06-08T19:55:26.269Z"
       }
     ],
     "restSeries": {},
