@@ -1,9 +1,20 @@
 {
-  "name": "НейроКурс Трекер 4.2",
+  "name": "НейроКурс Трекер 4.3",
   "short_name": "НейроКурс",
-  "start_url": "./index.html?v=41",
+  "description": "Офлайн-трекер курса с GitHub-синхронизацией, планированием и анти-выгоранием",
+  "start_url": "./index.html?v=43",
+  "scope": "./",
   "display": "standalone",
+  "orientation": "portrait-primary",
   "background_color": "#0f172a",
   "theme_color": "#7c3aed",
-  "description": "Трекер курса со встроенными данными, планированием и GitHub-синхронизацией"
+  "lang": "ru",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
 }
