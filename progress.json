@@ -1,6 +1,6 @@
 {
   "version": "4.3",
-  "updatedAt": "2026-06-09T13:36:56.258Z",
+  "updatedAt": "2026-06-10T21:59:11.881Z",
   "course": [
     {
       "section": "🧭 Введение",
@@ -1031,7 +1031,8 @@
       "generatedStudyMinutes": 64
     },
     "restDays": {
-      "2026-06-07": true
+      "2026-06-07": true,
+      "2026-06-09": true
     },
     "busy": [
       {
