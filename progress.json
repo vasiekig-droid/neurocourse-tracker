@@ -1,6 +1,4 @@
 {
-  "version": "4.3",
-  "updatedAt": "2026-06-20T11:58:14.226Z",
   "course": [
     {
       "section": "🧭 Введение",
@@ -163,7 +161,7 @@
               "type": "guide",
               "title": "Гайд",
               "duration": "",
-              "status": "todo"
+              "status": "done"
             }
           ]
         },
@@ -181,7 +179,7 @@
               "type": "guide",
               "title": "Гайд",
               "duration": "",
-              "status": "todo"
+              "status": "done"
             }
           ]
         },
@@ -199,7 +197,7 @@
               "type": "guide",
               "title": "Гайд",
               "duration": "",
-              "status": "todo"
+              "status": "done"
             }
           ]
         },
@@ -217,7 +215,7 @@
               "type": "guide",
               "title": "Гайд",
               "duration": "",
-              "status": "todo"
+              "status": "done"
             }
           ]
         }
@@ -247,49 +245,50 @@
               "type": "guide",
               "title": "Гайд 1",
               "duration": "",
-              "status": "todo"
+              "status": "done"
             },
             {
               "type": "guide",
               "title": "Гайд 2",
               "duration": "",
-              "status": "todo"
+              "status": "done",
+              "watched": ""
             },
             {
               "type": "homework",
               "title": "Подготовить датасет",
               "duration": "",
-              "status": "todo"
+              "status": "progress"
             },
             {
               "type": "homework",
               "title": "Подобрать минимум 10 референсов",
               "duration": "",
-              "status": "todo"
+              "status": "done"
             },
             {
               "type": "homework",
               "title": "Сохранить референсы на компьютере",
               "duration": "",
-              "status": "todo"
+              "status": "done"
             },
             {
               "type": "homework",
               "title": "Прописать промпты к референсам",
               "duration": "",
-              "status": "todo"
+              "status": "done"
             },
             {
               "type": "star",
               "title": "Придумать идею фотосессии с ChatGPT",
               "duration": "",
-              "status": "todo"
+              "status": "done"
             },
             {
               "type": "star",
               "title": "Проработать промпты по идее",
               "duration": "",
-              "status": "todo"
+              "status": "done"
             }
           ]
         },
@@ -321,25 +320,25 @@
               "type": "guide",
               "title": "Гайд",
               "duration": "",
-              "status": "todo"
+              "status": "done"
             },
             {
               "type": "homework",
               "title": "Провести фотосессию по подготовленным промптам",
               "duration": "",
-              "status": "todo"
+              "status": "progress"
             },
             {
               "type": "homework",
               "title": "Сделать фото в Superjet",
               "duration": "",
-              "status": "todo"
+              "status": "progress"
             },
             {
               "type": "homework",
               "title": "Выложить работу в Telegram-группу «Ваши работы фото»",
               "duration": "",
-              "status": "todo"
+              "status": "progress"
             }
           ]
         },
@@ -357,19 +356,19 @@
               "type": "guide",
               "title": "Гайд 1",
               "duration": "",
-              "status": "todo"
+              "status": "done"
             },
             {
               "type": "guide",
               "title": "Гайд 2",
               "duration": "",
-              "status": "todo"
+              "status": "done"
             },
             {
               "type": "guide",
               "title": "Гайд 3",
               "duration": "",
-              "status": "todo"
+              "status": "done"
             }
           ]
         },
@@ -380,19 +379,19 @@
               "type": "guide",
               "title": "Гайд 1",
               "duration": "",
-              "status": "todo"
+              "status": "done"
             },
             {
               "type": "guide",
               "title": "Гайд 2",
               "duration": "",
-              "status": "todo"
+              "status": "done"
             },
             {
               "type": "guide",
               "title": "Гайд 3",
               "duration": "",
-              "status": "todo"
+              "status": "done"
             }
           ]
         },
@@ -403,7 +402,7 @@
               "type": "guide",
               "title": "Гайд",
               "duration": "",
-              "status": "todo"
+              "status": "done"
             }
           ]
         }
@@ -431,13 +430,14 @@
               "type": "video",
               "title": "Видео",
               "duration": "28:32",
-              "status": "todo"
+              "status": "done",
+              "watched": "28:32"
             },
             {
               "type": "guide",
               "title": "Гайд",
               "duration": "",
-              "status": "todo"
+              "status": "done"
             }
           ]
         },
@@ -448,13 +448,14 @@
               "type": "video",
               "title": "Видео",
               "duration": "22:28",
-              "status": "todo"
+              "status": "done",
+              "watched": "22:28"
             },
             {
               "type": "guide",
               "title": "Гайд",
               "duration": "",
-              "status": "todo"
+              "status": "done"
             }
           ]
         },
@@ -1026,7 +1027,8 @@
       "2026-06-16": true,
       "2026-06-17": true,
       "2026-06-18": true,
-      "2026-06-20": true
+      "2026-06-20": true,
+      "2026-06-21": true
     },
     "videoDays": {
       "2026-06-06": 5518,
@@ -1654,6 +1656,45 @@
     ],
     "restSeries": {},
     "pendingWorkImages": [],
-    "pendingIdeaRefs": []
-  }
+    "pendingIdeaRefs": [],
+    "deferred": [
+      {
+        "key": "manual-1782035591906",
+        "title": "Конечно, не каждую свою фотографию я делаю так тщательно :)Это лишь пример, как можно заморочиться, если вы хотите воссоздать какую-то конкретную идею.Домашнее задание:  1. Провести свою фотосессию по подготовленным промптам на том сайте, который вы выберете для дальнейшей работы2. Сделать фотку в суперджете и выложить ее в ветку в тг-группе \"Ваши работы фото\"промпт для фото:Inside a luxurious private jet, she reclines effortlessly on a plush leather seat, her long legs elegantly crossed. Wearing a tailored white suit with a plunging neckline, she holds a glass of champagne in one hand while her other casually rests on a designer travel bag. A sleek wristwatch and diamond earrings add to her extravagant aesthetic. Sunlight streams through the jet window, highlighting her radiant complexion.",
+        "source": "Фотосессия с помощью сайта higgsfield",
+        "priority": "🟡 Средний",
+        "returnDate": "",
+        "reason": "Не подготовлен дадсет",
+        "createdAt": "2026-06-21",
+        "done": true
+      },
+      {
+        "key": "manual-1782035684685",
+        "title": "Домашнее задание:1. Подготовить датасет2. Подобрать референсы и прописать промпты к ним. (Сами фото тоже сохраняем на компьютере и пока не удаляем)Минимум 10 штук.Дополнительное домашнее задание со звездочкой:1) Придумать вместе с чатом GPT идею для своей фотосессии2) Проработать промпты по ней",
+        "source": "Обязательная подготовка",
+        "priority": "🟡 Средний",
+        "returnDate": "",
+        "reason": "требуется время для подготовки дадсета",
+        "createdAt": "2026-06-21",
+        "done": false
+      },
+      {
+        "key": "manual-1782036056009",
+        "title": "Домашнее задание:1. Подготовить датасет2. Подобрать референсы и прописать промпты к ним. (Сами фото тоже сохраняем на компьютере и пока не удаляем)Минимум 10 штук.Дополнительное домашнее задание со звездочкой:1) Придумать вместе с чатом GPT идею для своей фотосессии2) Проработать промпты по ней",
+        "source": "Обязательная подготовка",
+        "priority": "🟡 Средний",
+        "returnDate": "",
+        "reason": "требуется время на датасет",
+        "createdAt": "2026-06-21",
+        "done": false
+      }
+    ],
+    "dailyPlan": {
+      "2026-06-21": {
+        "watched": 0,
+        "plan": 120
+      }
+    }
+  },
+  "updatedAt": "2026-06-21T19:35:05.558Z"
 }
