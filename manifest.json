@@ -1,9 +1,9 @@
 {
-  "name": "НейроКурс Трекер v4.7 WORKING",
+  "name": "НейроКурс Трекер v4.8",
   "short_name": "НейроКурс",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0f172a",
   "theme_color": "#7c3aed",
-  "description": "Рабочий трекер курса с хвостами, дневным светофором и GitHub Sync"
+  "description": "Трекер курса v4.8 с дедлайном и автоматическим дневным прогрессом"
 }
